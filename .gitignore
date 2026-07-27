@@ -1,8 +1,36 @@
 # Environment and secrets
 .env
+.env.*
+.envrc
+.environment
+config.json
+config.yaml
+config.yml
+secrets.json
+secrets.yaml
+secrets.yml
+credentials.json
+credentials.yaml
+credentials.yml
+api_keys.json
+api_keys.yaml
+api_keys.yml
+private_keys/
+certificates/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+auth_config.*
+
+# Virtual environments
 .venv/
 venv/
 env/
+ENV/
+env.bak/
+venv.bak/
 
 # Python
 __pycache__/
@@ -64,3 +92,33 @@ requirements-lock.txt
 # Installer files
 Git-installer.exe
 *.exe
+
+# Additional security patterns
+*.log
+*.sqlite
+*.db
+local_settings.py
+instance/
+.webassets-cache
+.scrapy
+
+# Cloud provider credentials
+.aws/
+.azure/
+.gcloud/
+gcloud-service-key.json
+azure-credentials.json
+aws-credentials.json
+
+# Database files
+*.sqlite3
+*.db3
+database.db
+local.db
+
+# Temporary and cache files
+tmp/
+temp/
+.tmp/
+.cache/
+.parcel-cache/

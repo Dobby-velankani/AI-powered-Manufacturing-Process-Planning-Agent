@@ -1,0 +1,414 @@
+{
+  "part": {
+    "drawing_number": "VI-SR5-25-72-25-07-R0",
+    "assembly_drawing": "VI-SR5-25-72-25-R0",
+    "description": "Bottom die plate",
+    "material": "C45",
+    "quantity": 1,
+    "weight_kg": 0.8,
+    "drawn_by": "Gegyasa",
+    "date": "02/07/26",
+    "scale": "1:1",
+    "size": "A3",
+    "sheet": "01/01",
+    "revision": "00",
+    "company": "Velankani Information Systems Pvt. Ltd., Bangalore, India",
+    "general_tolerance": "ISO 2768-mK",
+    "tolerance_table": {
+      "one_decimal_mm": "+-0.2",
+      "two_decimal_mm": "+-0.02",
+      "three_decimal_mm": "+-0.005"
+    }
+  },
+
+  "drawing_interpretation": {
+    "overall_size_mm": "95.0 x 95.0 x 10.0",
+    "coordinate_origin": "Plate centre (0,0)",
+    "hole_groups": {
+      "AB_compound": {
+        "note": "Tags A1-A4 and B1-B4 refer to the SAME four hole locations — two diameters at each position",
+        "through_dia_mm": 6.40,
+        "counterbore_dia_mm": 10.40,
+        "counterbore_depth_mm": 6.80,
+        "qty": 4,
+        "locations": [
+          { "tag": "A1/B1", "x": -40.00, "y": 0.00 },
+          { "tag": "A2/B2", "x": 0.00,   "y": -40.00 },
+          { "tag": "A3/B3", "x": 0.00,   "y": 40.00 },
+          { "tag": "A4/B4", "x": 40.00,  "y": 0.00 }
+        ]
+      },
+      "C_precision": {
+        "note": "Four separate Ø5 H7 precision through holes",
+        "dia_fit": "5.00 H7",
+        "dia_range_mm": [5.000, 5.010],
+        "qty": 4,
+        "locations": [
+          { "tag": "C1", "x": -36.96, "y": -15.31 },
+          { "tag": "C2", "x": -15.31, "y": 36.96 },
+          { "tag": "C3", "x": 15.31,  "y": -36.96 },
+          { "tag": "C4", "x": 36.96,  "y": 15.31 }
+        ]
+      },
+      "DE_compound": {
+        "note": "Tags D1-D4 and E1-E4 refer to the SAME four hole locations — two diameters at each position",
+        "through_dia_mm": 8.00,
+        "counterbore_fit": "16.00 H7",
+        "counterbore_dia_range_mm": [16.000, 16.020],
+        "counterbore_depth_mm": 8.00,
+        "qty": 4,
+        "locations": [
+          { "tag": "D1/E1", "x": -35.00, "y": -30.00 },
+          { "tag": "D2/E2", "x": -35.00, "y": 30.00 },
+          { "tag": "D3/E3", "x": 35.00,  "y": -30.00 },
+          { "tag": "D4/E4", "x": 35.00,  "y": 30.00 }
+        ]
+      }
+    },
+    "critical_warning": "Do NOT drill 8 separate A-holes and 8 separate B-holes. A and B are two diameters at the same 4 locations. Same applies to D and E. Confirm with design before issuing operation sheet."
+  },
+
+  "dro_coordinates": {
+    "note": "Plate is 95x95 mm. Datum origin set at finished lower-left corner for manual DRO work. Centre = X47.50, Y47.50 from lower-left.",
+    "AB_compound_holes": [
+      { "tag": "A1/B1", "dro_x": 7.50,  "dro_y": 47.50 },
+      { "tag": "A2/B2", "dro_x": 47.50, "dro_y": 7.50 },
+      { "tag": "A3/B3", "dro_x": 47.50, "dro_y": 87.50 },
+      { "tag": "A4/B4", "dro_x": 87.50, "dro_y": 47.50 }
+    ],
+    "C_precision_holes": [
+      { "tag": "C1", "dro_x": 10.54, "dro_y": 32.19 },
+      { "tag": "C2", "dro_x": 32.19, "dro_y": 84.46 },
+      { "tag": "C3", "dro_x": 62.81, "dro_y": 10.54 },
+      { "tag": "C4", "dro_x": 84.46, "dro_y": 62.81 }
+    ],
+    "DE_compound_holes": [
+      { "tag": "D1/E1", "dro_x": 12.50, "dro_y": 17.50 },
+      { "tag": "D2/E2", "dro_x": 12.50, "dro_y": 77.50 },
+      { "tag": "D3/E3", "dro_x": 82.50, "dro_y": 17.50 },
+      { "tag": "D4/E4", "dro_x": 82.50, "dro_y": 77.50 }
+    ]
+  },
+
+  "raw_material": {
+    "grade": "C45",
+    "condition": "Normalized",
+    "blank_size_mm": "100 x 100 x 11.5 to 12.0",
+    "rationale": "Extra 5 mm on each face dimension useful for clamping during hole machining. Extra 1.5-2 mm on thickness covers roughing and grinding allowance.",
+    "requirements": [
+      "Normalized condition — no hardening unless design specifies",
+      "Check flatness before machining — do not load bowed plate onto milling machine",
+      "Record material batch for traceability"
+    ]
+  },
+
+  "manufacturing_philosophy": {
+    "approach": "Manual-first — use manual machines for the majority of operations. Use CNC only where positional accuracy or size tolerance genuinely demands it.",
+    "manual_operations": [
+      "Band-saw cutting",
+      "Rough facing",
+      "Squaring to 95 x 95 mm",
+      "Surface grinding to 10.00 mm",
+      "Four O6.4 through holes",
+      "Four O8.0 through holes",
+      "Four O10.4 counterbores",
+      "Four O16 H7 counterbores (manual boring preferred — use CNC as fallback only)"
+    ],
+    "cnc_operations": [
+      "Four O5 H7 through holes — CNC drilling and reaming for positional accuracy",
+      "O16 H7 counterbores — CNC fine boring as fallback when manual boring cannot hold Ø16.000-16.020"
+    ]
+  },
+
+  "process_sequence": [
+    {
+      "op": 10,
+      "name": "Raw material preparation",
+      "machine": "VISPL-TLR-006 Lexon band saw",
+      "blank_size_mm": "100 x 100 x 11.5 to 12.0",
+      "actions": [
+        "Cut C45 normalized plate to 100 x 100 x 12 mm blank",
+        "Remove heavy scale from cut edges",
+        "Check for visible bow or twist before proceeding"
+      ]
+    },
+    {
+      "op": 20,
+      "name": "Rough manual milling",
+      "machine": "VISPL-TLR-003 Manford vertical precision milling machine",
+      "alternative": "VISPL-TLR-001 BFW universal milling machine",
+      "sequence": [
+        "Face-mill first surface lightly — remove scale",
+        "Flip and face opposite surface",
+        "Alternate faces — remove equal material from both sides to reduce bending",
+        "Rough thickness to 10.30-10.40 mm",
+        "Mill all four sides square",
+        "Rough outside to approximately 95.30 x 95.30 mm"
+      ],
+      "caution": "Do not remove all material from one face — thin plate will bow"
+    },
+    {
+      "op": 25,
+      "name": "Straightness check and optional stress relief",
+      "actions": [
+        "Check plate on surface plate with dial indicator",
+        "If bow is significant — leave overnight and recheck",
+        "Stress relieve only if plate repeatedly distorts — may need outsourcing (no heat-treatment furnace listed in equipment master)"
+      ],
+      "note": "For small normalized C45 plate stress relief is usually unnecessary unless raw plate was already distorted"
+    },
+    {
+      "op": 30,
+      "name": "Finish surface grinding",
+      "machine": "VISPL-TLR-015 Perfect surface grinder 550x300",
+      "alternative": "VISPL-TLR-014 Perfect surface grinder 1000x500",
+      "sequence": [
+        "Grind first face lightly",
+        "Flip and grind opposite face",
+        "Alternate sides — do not finish one face completely before touching the other",
+        "Light magnetic chuck force — thin plate distorts under heavy magnetic load",
+        "Finish thickness to 10.00 mm"
+      ],
+      "production_target_mm": "10.00 +- 0.02",
+      "drawing_tolerance": "One-decimal general +- 0.2 mm",
+      "checks": [
+        "Thickness at all four corners and centre",
+        "Flatness",
+        "Parallelism"
+      ],
+      "critical_note": "All counterbore depths must be machined AFTER surface grinding — depths are measured from the finished face"
+    },
+    {
+      "op": 40,
+      "name": "Finish outside dimensions manually",
+      "machine": "VISPL-TLR-003 Manford vertical precision milling machine",
+      "target_mm": "95.00 x 95.00",
+      "production_tolerance_mm": "+- 0.03 to +- 0.05",
+      "sequence": [
+        "Return ground plate to milling machine",
+        "Finish one side",
+        "Flip and finish opposite side parallel",
+        "Finish remaining two sides square",
+        "Achieve 95.00 x 95.00 mm"
+      ],
+      "note": "Finished outside edges become the DRO datum for all subsequent drilling operations"
+    },
+
+    {
+      "op": 50,
+      "name": "DRO drilling setup",
+      "machine": "VISPL-TLR-004 or VISPL-TLR-005 Eifco drilling machine with DRO",
+      "setup": [
+        "Place sacrificial mild-steel or aluminium plate under component — protects table and reduces exit burrs",
+        "Clamp component with low-profile clamps — full support below plate",
+        "Use edge finder or dial indicator to establish DRO datum",
+        "Set lower-left finished corner as X0, Y0",
+        "Centre of plate is X47.50, Y47.50 from lower-left corner"
+      ],
+      "sacrificial_plate_note": "Drill clearance holes in sacrificial plate below every through-hole location before clamping"
+    },
+    {
+      "op": 60,
+      "name": "Drill O6.4 through holes (4 off) and O8.0 through holes (4 off) on DRO drilling machine",
+      "machine": "VISPL-TLR-004 or VISPL-TLR-005 Eifco drilling machine with DRO",
+      "sequence": [
+        "Spot all eight locations — A/B and D/E groups only. Do NOT spot C locations if O5 H7 will be CNC-reamed.",
+        "Drill four O6.4 through holes at A1/B1 through A4/B4 DRO coordinates",
+        "If tighter size required: drill O6.2-6.3 first then ream to O6.40",
+        "Drill four O8.0 through holes at D1/E1 through D4/E4 DRO coordinates",
+        "Drill O7.8 pilot first then ream to O8.0 for better concentricity and size",
+        "Use cutting fluid throughout",
+        "Reduce feed as drill exits to minimise exit burr"
+      ],
+      "note": "The Ø8 holes also guide the Ø16 H7 counterbore in the next stage"
+    },
+    {
+      "op": 70,
+      "name": "Produce O10.4 counterbores (4 off)",
+      "machine": "VISPL-TLR-003 Manford vertical precision milling machine",
+      "specification": "O10.40 dia, 6.80 mm deep, over the O6.4 through holes",
+      "preferred_method": {
+        "tool": "O10.4 flat-bottom piloted counterbore with O6.4 pilot",
+        "procedure": [
+          "Insert pilot into O6.4 through hole",
+          "Touch cutter onto finished face — set Z zero",
+          "Machine to approximately 6.75 mm depth",
+          "Final cut to exactly 6.80 mm",
+          "Check with depth micrometer"
+        ]
+      },
+      "alternative_method": {
+        "condition": "When piloted counterbore is not available",
+        "steps": [
+          "Locate spindle over O6.4 hole using coaxial indicator or setting pin",
+          "Rough with 8 or 10 mm end mill",
+          "Finish diameter with small boring head to O10.40",
+          "Finish bottom with flat-bottom end mill at 6.80 mm depth"
+        ],
+        "warning": "Do not use loose drilling-machine spindle with end mill for this operation"
+      },
+      "tolerances": {
+        "dia_mm": "10.40 +- 0.02",
+        "depth_mm": "6.80 +- 0.02"
+      }
+    },
+    {
+      "op": 80,
+      "name": "Produce O16 H7 counterbores (4 off)",
+      "machine": "VISPL-TLR-003 Manford vertical precision milling machine (preferred manual method)",
+      "cnc_fallback": "VISPL-TLR-008 Makino VMC or VISPL-TLR-021 ACE MCV-700 Plus",
+      "specification": "O16.000 to O16.020 mm, 8.0 mm deep, over O8.0 through holes",
+      "preferred_manual_method": {
+        "steps": [
+          "Locate spindle accurately over O8 through hole using coaxial indicator or O8 setting pin",
+          "Rough with 14 or 15 mm flat-bottom end mill",
+          "Rough depth to approximately 7.8 mm",
+          "Finish bottom to 8.0 mm",
+          "Finish diameter using fine boring head",
+          "Measure after first finish cut",
+          "Adjust boring head in small increments",
+          "Target O16.008-16.012 mm (centred within H7 band)"
+        ],
+        "best_tooling": "O16 H7 piloted counterbore with O8.0 pilot and flat-bottom cutting geometry — reduces machining time significantly"
+      },
+      "cnc_fallback_condition": [
+        "No fine boring head available",
+        "Manual spindle runout is excessive",
+        "First manually bored hole is not round or not within O16.000-16.020",
+        "Consistent concentricity cannot be maintained manually"
+      ],
+      "procedure": "Machine and inspect first hole manually. Continue manually if result is satisfactory. Switch to CNC only if manual result fails.",
+      "warning": "Do not use an ordinary long-lead reamer for this blind counterbore — reamer chamfer prevents full H7 diameter reaching the shoulder"
+    },
+
+    {
+      "op": 90,
+      "name": "Produce O5 H7 through holes (4 off) on CNC",
+      "machine": "VISPL-TLR-008 Makino VMC",
+      "alternative": "VISPL-TLR-021 ACE MCV-700 Plus VMC",
+      "specification": "O5.000 to O5.010 mm through, H7",
+      "rationale": "These holes require both H7 diameter tolerance and accurate two-decimal coordinate positioning. CNC drilling and reaming is the correct method.",
+      "cnc_setup": [
+        "Clamp finished plate flat on clean fixture or parallels",
+        "Pick up two finished edges",
+        "Set lower-left corner as X0, Y0 (or set plate centre as X0, Y0)",
+        "Z0 on finished top face"
+      ],
+      "cnc_coordinates_from_lower_left": [
+        { "tag": "C1", "x": 10.54, "y": 32.19 },
+        { "tag": "C2", "x": 32.19, "y": 84.46 },
+        { "tag": "C3", "x": 62.81, "y": 10.54 },
+        { "tag": "C4", "x": 84.46, "y": 62.81 }
+      ],
+      "cnc_sequence": [
+        "Spot drill very lightly — do not make deep spot on H7 holes",
+        "Drill O4.80 or O4.85 through",
+        "Ream with sharp O5 H7 machine reamer",
+        "Flood coolant, continuous feed — do not stop or reverse reamer inside hole"
+      ],
+      "wedm_alternative": {
+        "use_when": [
+          "Reamed holes fail positional inspection",
+          "Extremely accurate true position required",
+          "Component is later hardened",
+          "O5 H7 reaming performance cannot be achieved reliably"
+        ],
+        "machine": "VISPL-TLR-012 Makino CNC WEDM",
+        "note": "For current unhardened C45 plate CNC drilling and reaming is faster and sufficient"
+      }
+    },
+    {
+      "op": 100,
+      "name": "Deburring and edge finishing",
+      "sequence": [
+        "Remove all drill exit burrs from bottom face",
+        "Break outside edges approximately 0.2-0.3 mm",
+        "Apply only very small edge break to H7 holes — do not reduce effective guiding length",
+        "Do not create large chamfer in O5 H7 or O16 H7 holes",
+        "Clean counterbore shoulders and corners",
+        "Remove all metal particles before inspection"
+      ]
+    },
+    {
+      "op": 110,
+      "name": "Final inspection",
+      "note": "Inspect after parts reach ambient temperature",
+      "inspection_plan": [
+        { "characteristic": "Outside 95 x 95",     "requirement_mm": "95.00 +- 0.2 (general)", "equipment": "Micrometer or calibrated vernier",                          "positions": "Both X and Y dimensions" },
+        { "characteristic": "Thickness 10 mm",     "requirement_mm": "10.0 +- 0.2 (general)",  "equipment": "Outside micrometer",                                          "positions": "Four corners and centre" },
+        { "characteristic": "Flatness",            "requirement": "ISO 2768-mK general",        "equipment": "Surface plate and dial test indicator",                       "positions": "Full face scan" },
+        { "characteristic": "Parallelism",         "requirement": "ISO 2768-mK general",        "equipment": "Micrometer mapping or surface plate",                        "positions": "Multiple points" },
+        { "characteristic": "O6.4 through",       "requirement_mm": "6.40 +- 0.02",            "equipment": "Calibrated plug gauge or pin",                                "positions": "All 4 holes" },
+        { "characteristic": "O10.4 counterbore",   "requirement_mm": "10.40 +- 0.02",           "equipment": "Bore gauge or suitable plug gauge",                           "positions": "All 4 counterbores" },
+        { "characteristic": "10.4 CB depth",       "requirement_mm": "6.80 +- 0.02",            "equipment": "Depth micrometer",                                            "positions": "All 4 counterbores" },
+        { "characteristic": "O8 through",         "requirement_mm": "8.00 approx",              "equipment": "Plug gauge or calibrated pin",                                "positions": "All 4 holes" },
+        { "characteristic": "O16 H7 counterbore",  "requirement_mm": "16.000 to 16.020",        "equipment": "GO/NO-GO plug gauge or bore gauge",                           "positions": "All 4 counterbores" },
+        { "characteristic": "16 CB depth",         "requirement_mm": "8.0 general",             "equipment": "Depth micrometer",                                            "positions": "All 4 counterbores" },
+        { "characteristic": "O5 H7 through",      "requirement_mm": "5.000 to 5.010",           "equipment": "5.000 GO and 5.010 NO-GO plug gauges",                        "positions": "All 4 holes — check taper and bell-mouth" },
+        { "characteristic": "Hole coordinates",    "requirement_mm": "+- 0.02 (two-decimal general)", "equipment": "CMM preferred; height gauge + gauge pins on granite surface plate if no CMM", "positions": "All 12 hole locations" },
+        { "characteristic": "Burrs and edges",    "requirement": "None permitted",              "equipment": "Visual and fingertip inspection",                             "positions": "All faces and holes" }
+      ]
+    }
+  ],
+
+  "machine_allocation": [
+    { "operation": "Raw material cutting",           "equipment": "VISPL-TLR-006 Lexon band saw",                              "in_house": true },
+    { "operation": "Rough milling — facing and squaring", "equipment": "VISPL-TLR-003 Manford vertical precision mill",       "in_house": true },
+    { "operation": "Surface grinding",               "equipment": "VISPL-TLR-015 Perfect surface grinder 550x300",            "in_house": true },
+    { "operation": "Finish outside 95 x 95",         "equipment": "VISPL-TLR-003 Manford vertical precision mill",            "in_house": true },
+    { "operation": "DRO drilling — O6.4 and O8",    "equipment": "VISPL-TLR-004 or VISPL-TLR-005 Eifco drilling machine with DRO", "in_house": true },
+    { "operation": "O10.4 counterbores",             "equipment": "VISPL-TLR-003 Manford vertical precision mill",            "in_house": true },
+    { "operation": "O16 H7 counterbores (manual)",  "equipment": "VISPL-TLR-003 Manford vertical precision mill + boring head","in_house": true },
+    { "operation": "O16 H7 counterbores (CNC fallback)", "equipment": "VISPL-TLR-008 Makino VMC or VISPL-TLR-021 ACE MCV-700 Plus", "in_house": true },
+    { "operation": "O5 H7 through holes — CNC",    "equipment": "VISPL-TLR-008 Makino VMC",                                  "in_house": true },
+    { "operation": "O5 H7 through holes — WEDM alt","equipment": "VISPL-TLR-012 Makino CNC WEDM",                            "in_house": true },
+    { "operation": "Deburring",                      "equipment": "Manual bench",                                             "in_house": true },
+    { "operation": "Final inspection",               "equipment": "Plug gauges, bore gauge, depth micrometer, surface plate, height gauge, CMM if available", "in_house": true }
+  ],
+
+  "drawing_clarifications": [
+    {
+      "item": 1,
+      "topic": "Duplicate hole tags A/B and D/E",
+      "description": "Tags A1-A4 and B1-B4 share identical X/Y coordinates in the hole table. Similarly D1-D4 and E1-E4 share coordinates. These represent compound holes — two diameters at each of four locations, not eight separate holes. Confirm this interpretation with design before issuing the operation sheet."
+    },
+    {
+      "item": 2,
+      "topic": "No heat treatment specified",
+      "description": "C45 is capable of being hardened but no hardness or heat-treatment requirement appears on the drawing. Part should be manufactured in normalized condition unless design issues a revised requirement."
+    },
+    {
+      "item": 3,
+      "topic": "Surface finish not called out",
+      "description": "No Ra or surface texture symbol on the drawing. ISO 2768-mK general tolerance applies. For a die plate mating face, Ra 1.6 um on ground faces and Ra 3.2 um on milled faces is a reasonable shop standard unless otherwise specified."
+    },
+    {
+      "item": 4,
+      "topic": "Counterbore face — which face receives counterbores",
+      "description": "Section A-A and Section B-B show the counterbore profiles. Confirm from assembly drawing VI-SR5-25-72-25-R0 which face (top or bottom) receives each counterbore before programming or setting up the machining operations."
+    },
+    {
+      "item": 5,
+      "topic": "Positional tolerance for hole coordinates",
+      "description": "All hole coordinates are given to two decimal places. Under the general tolerance table (two-decimal = +- 0.02 mm), each coordinate carries +- 0.02 mm. If a true position geometric tolerance is intended, it should be explicitly called out on the drawing. Confirm with design."
+    },
+    {
+      "item": 6,
+      "topic": "No CMM in equipment master",
+      "description": "Hole coordinate positions at +- 0.02 mm should ideally be verified on a CMM. If none is available in-house, inspect using calibrated gauge pins and digital height gauge on a granite surface plate. Use CMM at an outside lab for first-off or critical inspection."
+    }
+  ],
+
+  "critical_precautions": [
+    "Machine all holes and outside profile from the same coordinate datum — do not re-datum between operations",
+    "Grind faces BEFORE machining any counterbore depths — all depths are measured from the finished ground face",
+    "Do not finish O5 H7 holes by spot-drilling and drilling alone — ream on CNC",
+    "Do not use an ordinary long-lead machine reamer for the O16 H7 blind counterbore",
+    "Do not use EDM or WEDM for the blind counterbores",
+    "Confirm which face carries the counterbores from Sections A-A and B-B before starting",
+    "Confirm the A/B and D/E compound-hole interpretation with design before issuing the operation sheet",
+    "Do not use a radial drilling machine for the O5 H7 holes — positional accuracy insufficient"
+  ],
+
+  "route_summary": "Band-saw C45 blank to 100x100x12 mm -> rough face and square on Manford mill -> check flatness -> surface grind to 10.00 +-0.02 mm on Perfect grinder -> finish mill outside to 95.00x95.00 mm -> DRO drill O6.4 through (4 off) and O8.0 through (4 off) on Eifco DRO drilling machine -> produce O10.4 x 6.80 counterbores on Manford mill with piloted counterbore tool -> produce O16 H7 x 8.0 counterbores on Manford mill with boring head (Makino VMC fallback if manual cannot hold tolerance) -> CNC drill and ream O5 H7 through holes (4 off) on Makino VMC -> deburr and edge break -> 100% inspection"
+}

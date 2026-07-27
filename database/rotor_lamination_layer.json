@@ -1,0 +1,245 @@
+{
+  "part": {
+    "drawing_number": "VI-GBT-26-113-08-R0",
+    "assembly_drawing": "VI-GBT-26-113-R0",
+    "description": "Rotor_lamination_layer",
+    "material": "MS",
+    "quantity": 2,
+    "weight_g": 243.22,
+    "drawn_by": "Gegyasa Yadav",
+    "date": "05/06/26",
+    "scale": "2:1",
+    "sheet": "01/01",
+    "size": "A3",
+    "company": "Velankani Information Systems Pvt. Ltd., Bangalore, India",
+    "general_tolerance": "ISO 2768-mK",
+    "tolerance_table": {
+      "one_decimal_mm": "±0.2",
+      "two_decimal_mm": "±0.02",
+      "three_decimal_mm": "±0.005"
+    },
+    "chamfer_all_edges": "0.5 × 45°",
+    "surface_finish_symbols": "25 / 3.2 / 0.4 / 0.1"
+  },
+
+  "drawing_requirements": {
+    "overall_width_mm":        { "nominal": 50.0,  "tolerance": "±0.2" },
+    "overall_thickness_mm":    { "nominal": 20.0,  "tolerance": "±0.2" },
+    "overall_height_mm":       { "nominal": 45.0,  "tolerance": "±0.2", "note": "Derived: 15+20+10 = 45 mm — confirm on drawing" },
+    "top_member_thickness_mm": { "nominal": 15.0,  "tolerance": "±0.2" },
+    "main_opening_height_mm":  { "nominal": 20.00, "tolerance": "±0.02", "note": "Two-decimal dimension — tighter tolerance applies" },
+    "bottom_member_height_mm": { "nominal": 10.0,  "tolerance": "±0.2" },
+    "hole_diameter_mm":        { "nominal": 6.4,   "tolerance": "general ±0.2", "type": "THRU top web" },
+    "hole_position": {
+      "from_end_mm": 25.0,
+      "from_side_mm": 10.0,
+      "note": "Centred on 50×20 mm top face"
+    },
+    "inferred_dimensions_need_confirmation": {
+      "left_wall_mm": 10.0,
+      "right_wall_mm": 10.0,
+      "main_opening_width_mm": 30.0,
+      "lower_arm_length_mm": 20.0,
+      "bottom_opening_mm": "10 × 10",
+      "note": "These dimensions are inferred from weight calculation — not explicitly shown on drawing. Must be confirmed before production."
+    }
+  },
+
+  "weight_verification": {
+    "formula": "(50×45 - 30×20 - 10×10) × 20 mm³",
+    "volume_mm3": 31000,
+    "ms_density_g_per_mm3": 0.00785,
+    "calculated_weight_g": 243.35,
+    "drawing_weight_g": 243.22,
+    "match": true
+  },
+
+  "drawing_clarifications": [
+    { "item": 1, "topic": "Left and right wall thickness", "description": "10 mm walls inferred from weight — confirm explicitly on drawing" },
+    { "item": 2, "topic": "Main opening width", "description": "30 mm inferred — confirm explicitly" },
+    { "item": 3, "topic": "Lower arm length", "description": "20 mm inferred — confirm explicitly" },
+    { "item": 4, "topic": "Bottom opening size", "description": "10×10 mm inferred — confirm explicitly" },
+    { "item": 5, "topic": "Overall height", "description": "45 mm derived from 15+20+10 — confirm on drawing" },
+    { "item": 6, "topic": "Hole depth", "description": "Add 'THRU TOP WEB' or equivalent depth note to drawing" },
+    { "item": 7, "topic": "Internal corner radius", "description": "No permissible radius specified. WEDM leaves ~R0.15–0.20. Specify R0.2 max or confirm acceptable radius with designer." },
+    { "item": 8, "topic": "MS grade", "description": "Specify exact grade e.g. IS 2062 E250 if material properties matter" }
+  ],
+
+  "process_sequence": [
+    {
+      "op": 10,
+      "name": "Band saw — blank cutting",
+      "machine": "Lexon band-saw machine (VISPL-TLR-006)",
+      "blank_size_mm": "52 × 47 × 22 (or 53 × 48 × 25 if only 25 mm plate available)",
+      "quantity": 2,
+      "actions": ["Cut two blanks", "Remove heavy burrs", "Mark with individual ID numbers"]
+    },
+    {
+      "op": 20,
+      "name": "Manual milling — face datum A",
+      "machine": "Universal milling machine (VISPL-TLR-001) or Vertical ram precision milling machine (VISPL-TLR-003)",
+      "actions": ["Face first large surface — establish datum A", "Check flat seating"]
+    },
+    {
+      "op": 30,
+      "name": "Manual milling — finish thickness",
+      "machine": "Universal or vertical ram milling machine",
+      "target_mm": 20.0,
+      "tolerance": "±0.2",
+      "actions": ["Face opposite surface", "Finish thickness to 20.0 mm", "Check with outside micrometer"]
+    },
+    {
+      "op": 40,
+      "name": "Manual milling — square and finish outside block",
+      "machine": "Universal or vertical ram milling machine",
+      "targets_mm": { "width": 50.0, "height": 45.0 },
+      "sequence": [
+        "Mill one long side straight",
+        "Mill opposite long side to 50.0 mm width",
+        "Mill one end square",
+        "Mill opposite end to 45.0 mm overall height"
+      ],
+      "inspection": "Vernier, height gauge and engineer's square",
+      "note": "±0.2 mm tolerance on one-decimal dimensions — careful manual milling is sufficient. Surface grinding optional for better flatness/parallelism."
+    },
+    {
+      "op": 50,
+      "name": "WEDM — internal profile",
+      "machine": "Makino CNC WEDM (VISPL-TLR-012)",
+      "why_wedm": [
+        "20.00 mm opening requires ±0.02 mm tolerance",
+        "WEDM produces much smaller internal corner radius than end mill",
+        "Profile is open to bottom — no start hole needed",
+        "Both parts can be stacked and cut together"
+      ],
+      "datum_setup": "Bottom-left corner of front face = X0, Y0",
+      "wedm_profile_coordinates": [
+        "Start at bottom edge: X30, Y0",
+        "Move to: X30, Y10",
+        "Move to: X10, Y10",
+        "Move to: X10, Y30",
+        "Move to: X40, Y30",
+        "Move to: X40, Y0",
+        "Exit through bottom edge"
+      ],
+      "profile_results": {
+        "left_wall_mm": 10,
+        "right_wall_mm": 10,
+        "top_bar_mm": 15,
+        "main_window_mm": "30 × 20",
+        "lower_arm_mm": "20 × 10",
+        "bottom_opening_mm": "10 × 10"
+      },
+      "wedm_procedure": [
+        "Indicate the finished 50×45 block",
+        "Establish zero from finished left and bottom surfaces",
+        "Support removable slug to prevent wire breakage",
+        "One rough cut",
+        "At least one skim cut on main opening",
+        "Target 20.00 mm opening at 20.000–20.010 mm",
+        "Lightly stone burr/wire-start area only — do not round measured surfaces"
+      ],
+      "stacking_both_parts": {
+        "feasible": true,
+        "conditions": [
+          "Both blanks must have similar thickness",
+          "Clamp tightly without gap",
+          "Ensure both parts have proper electrical contact",
+          "Use good flushing",
+          "Inspect both pieces separately after cutting"
+        ]
+      },
+      "internal_corner_radius": "~R0.15–0.20 mm with 0.25 mm wire — confirm acceptable with designer"
+    },
+    {
+      "op": 60,
+      "name": "DRO drilling — Ø6.4 hole",
+      "machine": "DRO drilling machine (VISPL-TLR-007) or ACE VMC",
+      "drill": "Ø6.4 mm HSS drill — do not substitute 6.5 mm",
+      "sequence": [
+        "Drill AFTER WEDM — drill breaks through into internal opening, avoiding accidental drilling into lower arm",
+        "Clamp component on parallels, top face upward",
+        "Pick up finished side and end datums using DRO",
+        "Spot with centre drill",
+        "Drill Ø6.4 mm through 15 mm top web into opening",
+        "Lightly countersink both openings to remove burrs only"
+      ],
+      "position": { "from_end_mm": 25.0, "from_side_mm": 10.0 },
+      "reamer_required": false,
+      "note": "Drawing tolerance for Ø6.4 is wide — reamer not necessary"
+    },
+    {
+      "op": 70,
+      "name": "Chamfering and deburring",
+      "chamfer": "0.5 × 45°",
+      "apply_to": [
+        "All outside edges",
+        "Both mouths of Ø6.4 hole",
+        "Accessible edges of internal opening",
+        "Bottom slot edges"
+      ],
+      "caution": "Do not create large chamfer on internal measuring faces — interferes with inspection and assembly contact"
+    },
+    {
+      "op": 80,
+      "name": "Final inspection",
+      "action": "Complete dimensional inspection per inspection plan — record actual values"
+    },
+    {
+      "op": 90,
+      "name": "Protection",
+      "action": "Clean and apply light rust-preventive oil. Final visual check."
+    }
+  ],
+
+  "manual_milling_alternative": {
+    "applicable_when": "WEDM unavailable or internal corner radii are permitted",
+    "machine": "Vertical ram precision milling machine (VISPL-TLR-003)",
+    "cutter": "8 mm end mill (leaves ~R4 corners); 6 mm end mill (leaves ~R3 corners)",
+    "steps": [
+      "Enter through bottom opening",
+      "Rough complete opening leaving 0.20–0.30 mm",
+      "Finish vertical and horizontal walls using DRO coordinates",
+      "Measure 20.00 mm opening after each finishing pass"
+    ],
+    "limitation": "Leaves R3–R4 internal corners — acceptable only when mating part allows it. Use WEDM when corners mate with another part or drawing shape must be closely maintained."
+  },
+
+  "machine_allocation": [
+    { "operation": "Blank cutting",           "equipment": "Lexon band-saw (VISPL-TLR-006)",                                    "in_house": true },
+    { "operation": "Outside block milling",   "equipment": "Universal mill (VISPL-TLR-001) or Vertical ram mill (VISPL-TLR-003)", "in_house": true },
+    { "operation": "Internal profile",        "equipment": "Makino CNC WEDM (VISPL-TLR-012) — preferred",                       "in_house": true },
+    { "operation": "Internal profile alt.",   "equipment": "Vertical ram precision milling machine (VISPL-TLR-003)",             "in_house": true },
+    { "operation": "Ø6.4 hole drilling",      "equipment": "DRO drilling machine (VISPL-TLR-007) or ACE VMC",                   "in_house": true },
+    { "operation": "Chamfer and deburr",      "equipment": "Manual / bench",                                                    "in_house": true },
+    { "operation": "Surface grinding (opt.)", "equipment": "Perfect surface grinder (VISPL-TLR-014)",                           "in_house": true }
+  ],
+
+  "inspection_plan": {
+    "outside_dimensions": [
+      { "characteristic": "Width",        "nominal_mm": 50.0,  "tolerance": "±0.2", "equipment": "Vernier or micrometer" },
+      { "characteristic": "Height",       "nominal_mm": 45.0,  "tolerance": "±0.2", "equipment": "Height gauge" },
+      { "characteristic": "Thickness",    "nominal_mm": 20.0,  "tolerance": "±0.2", "equipment": "Outside micrometer" },
+      { "characteristic": "Squareness",   "target_mm": "≤0.05 over 20 mm",          "equipment": "Engineer's square / dial indicator" }
+    ],
+    "internal_profile": [
+      { "characteristic": "Main opening width",  "nominal_mm": 30.0,  "equipment": "Inside micrometer or vernier" },
+      { "characteristic": "Main opening height", "nominal_mm": 20.00, "tolerance": "±0.02", "equipment": "Inside micrometer or calibrated slip-gauge stack — vernier alone not adequate" },
+      { "characteristic": "Left wall",           "nominal_mm": 10.0,  "equipment": "Vernier / height gauge" },
+      { "characteristic": "Right wall",          "nominal_mm": 10.0,  "equipment": "Vernier / height gauge" },
+      { "characteristic": "Top bar",             "nominal_mm": 15.0,  "equipment": "Height gauge" },
+      { "characteristic": "Lower arm height",    "nominal_mm": 10.0,  "equipment": "Height gauge" },
+      { "characteristic": "Lower arm length",    "nominal_mm": 20.0,  "equipment": "Vernier" },
+      { "characteristic": "Bottom opening",      "nominal_mm": "10×10","equipment": "Vernier / pin or block gauge" }
+    ],
+    "hole": [
+      { "characteristic": "Diameter",        "nominal_mm": 6.4,  "equipment": "Pin gauge or vernier" },
+      { "characteristic": "Centre from end", "nominal_mm": 25.0, "equipment": "Height gauge / DRO readout" },
+      { "characteristic": "Centre from side","nominal_mm": 10.0, "equipment": "Height gauge / DRO readout" },
+      { "characteristic": "Perpendicularity","method": "Visual or pin check" },
+      { "characteristic": "Burr-free breakthrough", "method": "Visual inspection from inside window" }
+    ]
+  },
+
+  "route_summary": "Band-saw 52×47×22 mm blank → manual mill outside block to 50×45×20 mm → WEDM internal profile (stack both parts) → DRO drill Ø6.4 through top web → chamfer 0.5×45° and deburr → inspect → clean and protect"
+}

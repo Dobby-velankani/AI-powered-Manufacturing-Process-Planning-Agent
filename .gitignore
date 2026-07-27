@@ -1,0 +1,66 @@
+# Environment and secrets
+.env
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Test files and outputs
+test_*.py
+*_test.py
+smoke_test_*.py
+gemini_connection_test.py
+package_check.py
+validate_syntax.py
+inspect_database.py
+outputs/
+extracted_pages/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+backup/
+
+# Sample/test data
+mech_drw/
+*.pdf
+
+# Lock files (keep requirements.txt but ignore lock files)
+requirements-lock.txt
+
+# Installer files
+Git-installer.exe
+*.exe

@@ -1,0 +1,26 @@
+# Core dependencies
+pydantic>=2.13.0
+python-dotenv>=1.0.0
+
+# AI/ML providers
+google-genai>=2.12.0
+openai>=2.45.0
+
+# PDF processing
+pymupdf>=1.28.0
+
+# SSL certificate handling
+truststore>=0.10.0
+
+# HTTP clients
+httpx>=0.28.0
+requests>=2.34.0
+
+# Data processing
+numpy>=2.4.0
+
+# Progress indicators
+tqdm>=4.68.0
+
+# Async support
+anyio>=4.14.0

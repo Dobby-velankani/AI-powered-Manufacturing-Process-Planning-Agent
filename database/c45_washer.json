@@ -1,0 +1,374 @@
+{
+  "part": {
+    "drawing_number": "VI-SR5-25-72-25-08-R0",
+    "assembly_drawing": "VI-SR5-25-72-25-R0",
+    "description": "Washer",
+    "material": "C45",
+    "material_note": "Medium-carbon steel, normalized or annealed condition. No heat treatment specified on drawing — manufacture and supply in as-turned condition unless designer adds hardness requirement.",
+    "quantity": 10,
+    "drawing_weight_kg": 0.8,
+    "actual_weight_per_piece_g": 2.33,
+    "actual_weight_10_pieces_g": 23.3,
+    "weight_note": "Title-block mass of 0.8 kg is incorrect. Calculated finished weight per piece ~2.33 g; 10 pieces ~23.3 g.",
+    "drawn_by": "Gegyasa",
+    "date": "02/07/26",
+    "scale": "1:1",
+    "size": "A3",
+    "sheet": "01/01",
+    "revision": "00",
+    "company": "Velankani Information Systems Pvt. Ltd., Bangalore, India",
+    "general_tolerance": "ISO 2768-mK",
+    "tolerance_table": {
+      "one_decimal_mm": "+/- 0.2",
+      "two_decimal_mm": "+/- 0.02",
+      "three_decimal_mm": "+/- 0.005"
+    }
+  },
+
+  "dimensions": {
+    "OD_mm":        { "nominal": 12.50, "tolerance": "+/- 0.02", "range_mm": [12.48, 12.52], "production_target_mm": "12.495-12.505" },
+    "ID_mm":        { "nominal": 5.50,  "tolerance": "+/- 0.02", "range_mm": [5.48,  5.52],  "production_target_mm": "5.495-5.505" },
+    "thickness_mm": { "nominal": 3.00,  "tolerance": "+/- 0.02", "range_mm": [2.98,  3.02],  "production_target_mm": "2.995-3.005" },
+    "chamfer_mm":   { "size_mm": 0.5,   "angle_deg": 45,         "note": "Chamfer location not fully clear on drawing — confirm if all four circular edges require chamfer. If yes, callout should read: C0.5 x 45 deg — 4 PLACES" },
+    "wall_thickness_mm": { "nominal": 3.50, "minimum_mm": 3.48, "note": "(OD - ID) / 2 = (12.50 - 5.50) / 2 = 3.50 mm" }
+  },
+
+  "tolerance_discussion": {
+    "current_drawing_interpretation": {
+      "note": "All three dimensions are written with two decimal places. Title-block general tolerance therefore applies as +/- 0.02 mm to all three.",
+      "ID_mm":        { "tolerance": "+/- 0.02", "range_mm": [5.48, 5.52], "note": "ID is currently allowed to be smaller than 5.50" },
+      "OD_mm":        { "tolerance": "+/- 0.02", "range_mm": [12.48, 12.52], "note": "OD is currently allowed to be larger than 12.50" },
+      "thickness_mm": { "tolerance": "+/- 0.02", "range_mm": [2.98, 3.02] }
+    },
+    "functional_tolerance_options": {
+      "ID_unilateral_positive": {
+        "callout": "O5.50 +0.02 / 0",
+        "range_mm": [5.50, 5.52],
+        "use_when": "Guaranteed minimum clearance required — hole must never be smaller than 5.50 mm"
+      },
+      "OD_unilateral_negative": {
+        "callout": "O12.50 0 / -0.02",
+        "range_mm": [12.48, 12.50],
+        "use_when": "OD must never exceed 12.50 mm — ensures washer fits into pocket or bore"
+      },
+      "thickness_bilateral": {
+        "callout": "3.00 +/- 0.02",
+        "range_mm": [2.98, 3.02],
+        "use_when": "Variation on either side acceptable"
+      },
+      "thickness_unilateral_negative": {
+        "callout": "3.00 0 / -0.02",
+        "range_mm": [2.98, 3.00],
+        "use_when": "Extra thickness causes interference or changes assembly height — must not exceed 3.00"
+      },
+      "thickness_unilateral_positive": {
+        "callout": "3.00 +0.02 / 0",
+        "range_mm": [3.00, 3.02],
+        "use_when": "Minimum spacing, strength or preload must be maintained — must not go below 3.00"
+      },
+      "recommended_callout_for_assembly": {
+        "OD": "O12.50 0 / -0.02",
+        "ID": "O5.50 +0.02 / 0",
+        "thickness": "3.00 +/- 0.02",
+        "note": "Recommended only — must be confirmed against mating shaft diameter, pocket diameter and required assembled height. Do not assume unilateral tolerance from feature type; must be explicitly written on drawing."
+      }
+    }
+  },
+
+  "drawing_clarifications": [
+    {
+      "item": 1,
+      "topic": "Chamfer location not fully specified",
+      "description": "Drawing shows 0.5 x 45 deg callout but does not clearly state how many edges require chamfer. If all four circular edges (front OD, front ID, rear OD, rear ID) require chamfer, update callout to: C0.5 x 45 deg — 4 PLACES."
+    },
+    {
+      "item": 2,
+      "topic": "Surface finish not specified",
+      "description": "No Ra or surface texture symbol on drawing. Recommended: faces Ra 1.6-3.2 um, OD and ID Ra 1.6-3.2 um."
+    },
+    {
+      "item": 3,
+      "topic": "Heat treatment not specified",
+      "description": "C45 is hardenable but no hardness requirement appears on drawing. Manufacture in normalized / as-turned condition. Do not harden unless designer adds explicit hardness callout."
+    },
+    {
+      "item": 4,
+      "topic": "Title-block weight incorrect",
+      "description": "Drawing shows 0.8 kg. Calculated actual weight per piece ~2.33 g; 10 pieces ~23.3 g. Correct before release."
+    },
+    {
+      "item": 5,
+      "topic": "Tolerance direction not specified for functional features",
+      "description": "Current drawing applies +/- 0.02 mm bilaterally to all dimensions because they are written with two decimal places. For assembly, designer should consider unilateral tolerances: ID +0.02/0, OD 0/-0.02. See tolerance_discussion section for options."
+    },
+    {
+      "item": 6,
+      "topic": "Shop-control geometric requirements not on drawing",
+      "description": "OD-to-ID concentricity TIR <= 0.03 mm, face parallelism <= 0.02 mm, face flatness <= 0.02 mm, and surface finish Ra 1.6-3.2 um are recommended shop controls but are not formal drawing requirements. Add to drawing if washer is used in precision die, spring assembly or guide mechanism."
+    }
+  ],
+
+  "raw_material": {
+    "grade": "C45",
+    "condition": "Normalized or annealed round bar",
+    "starting_diameter_mm": "14 or 16",
+    "blank_bar_length_mm": "approximately 100 mm for 10 pieces",
+    "workholding_preference": "Collet chuck preferred over standard three-jaw chuck — better concentricity for small component",
+    "inspection_before_machining": [
+      "Verify C45 material certificate",
+      "Check bar diameter",
+      "Remove scale or rust",
+      "Confirm bar is reasonably straight",
+      "Mark material batch for traceability"
+    ]
+  },
+
+  "tooling_list": [
+    { "tool": "T01 — VCGT or DCMT finishing insert", "purpose": "Facing and OD turning" },
+    { "tool": "T02 — Centre / spot drill",           "purpose": "Drill starting position — prevents small drill from wandering" },
+    { "tool": "T03 — O5.2 or O5.3 drill",           "purpose": "Rough hole" },
+    { "tool": "T04 — O5.50 machine reamer or small boring bar", "purpose": "Finish ID to O5.50 +/- 0.02" },
+    { "tool": "T05 — 45 degree turning / chamfer tool", "purpose": "ID and OD chamfers" },
+    { "tool": "T06 — 1.0-1.5 mm parting blade",     "purpose": "Parting washer from bar" },
+    { "tool": "Second-op fixture — stepped soft jaws or expanding mandrel", "purpose": "Holding washer for back-face finishing" }
+  ],
+
+  "process_sequence": [
+    {
+      "op": 10,
+      "name": "Incoming material inspection",
+      "checks": [
+        "C45 material certificate — verify batch number",
+        "Bar diameter O14 or O16 mm",
+        "Normalized or annealed condition",
+        "Surface — no rust, scale, seams or cracks",
+        "Bar straightness",
+        "Material batch marked for traceability"
+      ]
+    },
+    {
+      "op": 20,
+      "name": "CNC turning — Operation 10 (first side — machined from bar)",
+      "machine": "CNC turning centre",
+      "workholding": "O14 or O16 mm collet — keep bar projection as short as practical",
+      "sequence": [
+        "Step 1 — Face the bar: light finishing cut, no centre pip. This becomes Face A (Z0 datum).",
+        "Step 2 — Spot drill lightly on spindle centre.",
+        "Step 3 — Drill rough hole O5.20 or O5.30 through (depth minimum 5-6 mm).",
+        "Step 4 — Finish ID: preferred method is ream to O5.50 mm using O5.30 pre-drill + O5.50 machine reamer with continuous coolant. Alternative: CNC bore to O5.500, target O5.495-5.505.",
+        "Step 5 — Rough-turn OD to O12.55-12.60 mm, finish-turn to O12.500 mm. Target O12.495-12.505. Turn OD for at least 3.5-4.0 mm length.",
+        "Step 6 — Machine front chamfers: OD edge C0.5 x 45 deg, ID edge C0.5 x 45 deg if confirmed. Do not exceed 0.5 mm — only ~2 mm of full cylindrical length will remain if both faces are chamfered.",
+        "Step 7 — Part off at 3.15-3.20 mm thickness (recommended 3.20 mm — leaves ~0.20 mm for second-op facing). Use sharp parting blade, continuous coolant, low feed near centre. Use parts catcher — do not let part fall into chip conveyor."
+      ],
+      "step_8_repeat": "Repeat steps 1-7 for all 10 pieces. Face remaining bar before each new piece.",
+      "cutting_parameters": {
+        "OD_turning_at_O14mm": {
+          "spindle_speed_rpm": "3000-4500",
+          "roughing_feed_mm_per_rev": "0.08-0.12",
+          "finishing_feed_mm_per_rev": "0.04-0.08",
+          "roughing_doc_mm": "0.3-0.6",
+          "finishing_doc_mm": "0.10-0.20"
+        },
+        "O5_3_HSS_drilling": {
+          "spindle_speed_rpm": "1200-1700",
+          "feed_mm_per_rev": "0.05-0.08",
+          "coolant": "required",
+          "peck_interval_mm": "4-6 mm if drilling deep"
+        },
+        "O5_5_HSS_reaming": {
+          "spindle_speed_rpm": "450-700",
+          "feed_mm_per_rev": "0.08-0.15",
+          "coolant": "continuous flood",
+          "note": "Do not stop or reverse reamer inside hole"
+        },
+        "parting": {
+          "spindle_speed_rpm": "1800-2500",
+          "feed_mm_per_rev": "0.025-0.05",
+          "note": "Reduce feed near centre. Abundant coolant."
+        }
+      }
+    },
+    {
+      "op": 30,
+      "name": "CNC turning — Operation 20 (second side — finish the parted face)",
+      "machine": "CNC turning centre",
+      "purpose": "Face parted side and bring thickness to 3.00 mm. Machine rear chamfers.",
+      "second_op_fixture_options": {
+        "recommended": {
+          "type": "Stepped soft jaws (pot-chuck fixture)",
+          "preparation": [
+            "Install aluminium or mild-steel soft jaws in CNC lathe",
+            "Bore a shallow pocket in jaws while clamped under machining pressure",
+            "Pocket diameter: O12.49-12.50 mm (adjusted to actual OD of first piece)",
+            "Pocket depth: 1.0-1.5 mm",
+            "Flat axial locating shoulder with small corner relief so part seats fully"
+          ],
+          "advantages": ["Better support during facing", "Lower risk of part coming loose", "Easier thickness control", "Less chance of distorting small ID"],
+          "use_when": "Standard recommendation for quantity 10"
+        },
+        "alternative": {
+          "type": "Expanding mandrel",
+          "pilot_diameter_mm": "O5.48-5.49",
+          "features": ["Axial seating shoulder", "Slotted expanding section", "Draw screw or taper arrangement", "Very limited expansion"],
+          "advantages": ["Finished OD completely free — no jaw marks", "Holds concentrically from centre hole"],
+          "limitations": [
+            "Mandrel is very small and delicate for O5.50 ID / 3 mm thick washer",
+            "Too much expansion can increase hole size, distort washer, make hole oval, or damage ID surface",
+            "Tighten only enough to prevent movement during light facing"
+          ],
+          "use_when": "When finished OD must remain completely free from gripping marks"
+        }
+      },
+      "second_op_sequence": [
+        "Step 1 — Load part: place already-finished Face A against jaw shoulder (or mandrel shoulder). Very low clamping pressure — part is only 3 mm thick.",
+        "Step 2 — Face to final thickness: rough remove 0.10-0.12 mm, semi-finish leave 0.03-0.05 mm, final pass 0.03-0.05 mm. Target 3.000 mm. Acceptable 2.98-3.02 mm. Internal target 2.995-3.005 mm.",
+        "Step 3 — Machine rear chamfers: rear OD edge C0.5 x 45 deg, rear ID edge C0.5 x 45 deg if required. Verify first piece with profile projector or chamfer gauge.",
+        "Step 4 — Deburr: remove ID drilling/reaming burr, parting burr, chamfer intersection burr, all sharp edges on both faces. Use fine ceramic stone, deburring blade or light abrasive pad. Do not round off controlled chamfers."
+      ],
+      "thickness_measurement_note": "Measure frequently during initial setup — thermal growth and insert nose radius affect +/- 0.02 mm thickness control.",
+      "thickness_inspection_positions": ["12 o-clock", "3 o-clock", "6 o-clock", "9 o-clock"]
+    },
+    {
+      "op": 40,
+      "name": "Deburring and visual check",
+      "actions": [
+        "Remove all burrs — ID, OD, both faces, chamfer intersections",
+        "Use fine ceramic stone, deburring blade or light abrasive pad",
+        "Do not round chamfer edges",
+        "Visual check for parting marks, chatter, cracks, jaw marks, rust"
+      ]
+    },
+    {
+      "op": 50,
+      "name": "100% dimensional inspection",
+      "note": "Inspect all 10 pieces. Measure after parts stabilise at ambient temperature.",
+      "inspection_plan": [
+        {
+          "characteristic": "OD",
+          "requirement_mm": "12.48-12.52",
+          "equipment": "0-25 mm outside micrometer — do NOT rely on vernier caliper alone for +/- 0.02 mm tolerance",
+          "positions": "Two angular positions to detect ovality",
+          "reject_if": "Outside 12.48-12.52 mm or clearly oval"
+        },
+        {
+          "characteristic": "ID",
+          "requirement_mm": "5.48-5.52",
+          "equipment": "Pin gauges, small bore gauge, air gauge if available, or GO/NO-GO plug gauges",
+          "pin_check": "5.48 mm pin must enter freely; 5.52 mm pin must not pass freely",
+          "note": "Gauge design must include gauge-maker tolerance and wear allowance"
+        },
+        {
+          "characteristic": "Thickness",
+          "requirement_mm": "2.98-3.02",
+          "equipment": "Outside micrometer",
+          "positions": "Four positions — 12, 3, 6, 9 o-clock. Variation between positions indicates face parallelism.",
+          "internal_target_mm": "2.995-3.005"
+        },
+        {
+          "characteristic": "Chamfer",
+          "requirement": "0.5 mm width, 45 degrees",
+          "equipment": "Profile projector for first-piece approval, chamfer gauge for remaining pieces"
+        },
+        {
+          "characteristic": "Visual",
+          "reject_criteria": [
+            "Parting marks remaining on face",
+            "Heavy burrs",
+            "Rust",
+            "Jaw marks",
+            "Chatter marks",
+            "Cracks",
+            "Distorted or oval ID",
+            "Rounded chamfer edges"
+          ]
+        }
+      ],
+      "shop_control_recommendations": {
+        "note": "Not formal drawing requirements — apply as good manufacturing practice",
+        "OD_to_ID_concentricity_TIR_mm": "<= 0.03",
+        "face_parallelism_mm": "<= 0.02",
+        "face_flatness_mm": "<= 0.02",
+        "surface_finish": "Ra 1.6-3.2 um turned",
+        "add_to_drawing_if": "Washer is used in precision die, spring assembly or guide mechanism"
+      }
+    },
+    {
+      "op": 60,
+      "name": "Cleaning and packing",
+      "actions": [
+        "Wash parts to remove coolant and chips",
+        "Dry completely",
+        "Apply light rust-preventive oil",
+        "Pack individually or separate using oiled paper",
+        "Attach inspection report showing OD, ID and thickness readings for each piece",
+        "Maintain material-certificate traceability with batch"
+      ]
+    }
+  ],
+
+  "machine_allocation": [
+    { "operation": "Operation 10 — facing, drilling, reaming, OD turning, chamfer, parting", "equipment": "CNC turning centre", "in_house": true },
+    { "operation": "Operation 20 — second-side facing, rear chamfers",                       "equipment": "CNC turning centre with stepped soft jaws or expanding mandrel", "in_house": true },
+    { "operation": "Deburring",                                                               "equipment": "Manual bench",       "in_house": true },
+    { "operation": "Final inspection",                                                        "equipment": "Outside micrometer, pin gauges or bore gauge, profile projector", "in_house": true }
+  ],
+
+  "second_op_fixture_detail": {
+    "expanding_mandrel_explanation": {
+      "purpose": "Holds washer by its ID (O5.50 mm) after parting, leaving the finished OD completely free",
+      "components": [
+        "Small cylindrical pilot that enters the O5.50 hole",
+        "Shoulder against which the finished face of the washer rests",
+        "Split or tapered expanding section",
+        "Draw screw or taper nut that causes expansion",
+        "Very limited total expansion — enough to grip, not enough to distort"
+      ],
+      "operation_sequence": [
+        "Insert washer onto mandrel pilot",
+        "Push already-finished face against the axial shoulder",
+        "Tighten draw screw lightly",
+        "Mandrel expands inside O5.50 hole",
+        "Face the rough parted side to 3.00 mm",
+        "Machine rear OD and ID chamfers",
+        "Loosen screw and remove washer"
+      ],
+      "limitations_for_this_washer": [
+        "Mandrel is very small — pilot only ~O5.48-5.49 mm",
+        "Washer is only 3 mm thick — very short axial grip",
+        "Excessive expansion increases hole size beyond 5.52 mm",
+        "Distortion or ovality possible if over-tightened",
+        "Tighten only enough to resist light facing force"
+      ],
+      "verdict": "Stepped soft jaws are generally easier and safer for quantity 10. Use expanding mandrel only when jaw marks on OD are unacceptable."
+    },
+    "stepped_soft_jaw_detail": {
+      "jaw_pocket_diameter_mm": "O12.49-12.50 (bore to match actual OD of first turned piece)",
+      "jaw_pocket_depth_mm": "1.0-1.5",
+      "corner_relief": "Small relief so washer seats fully against flat axial shoulder",
+      "chuck_pressure": "Very low — excess pressure causes OD to go three-lobed",
+      "measurement_check": "Verify pocket diameter with bore gauge before loading first piece",
+      "thickness_variation_causes": [
+        "Burr between part and jaw shoulder",
+        "Part not seated flat against shoulder",
+        "Excessive chuck pressure",
+        "Jaw pocket not bored accurately",
+        "Parting face allowance too uneven between pieces"
+      ]
+    }
+  },
+
+  "route_summary": "C45 bar receipt -> material verification -> CNC Op10: face (Face A), spot-drill, drill O5.2-5.3, ream / bore ID to O5.50, rough and finish-turn OD to O12.500, front chamfers C0.5x45, part off at 3.15-3.20 mm -> repeat for all 10 pieces -> CNC Op20: load in stepped soft jaws (or expanding mandrel) with finished face against stop, face parted side to 3.00 mm, rear chamfers, deburr -> 100% inspection: OD O12.48-12.52, ID O5.48-5.52, thickness 2.98-3.02 at 4 positions -> clean, rust-protect, pack with inspection report.",
+
+  "recommended_final_specification": {
+    "material": "C45",
+    "condition": "Normalized, no heat treatment",
+    "OD_mm": "12.48-12.52 (drawing: O12.50 +/- 0.02)",
+    "ID_mm": "5.48-5.52 (drawing: O5.50 +/- 0.02)",
+    "thickness_mm": "2.98-3.02 (drawing: 3.00 +/- 0.02)",
+    "chamfer": "0.5 x 45 deg — confirm 4 places with designer",
+    "surface_finish_recommended": "Ra 1.6-3.2 um",
+    "concentricity_recommended_mm": "<= 0.03 TIR",
+    "face_parallelism_recommended_mm": "<= 0.02",
+    "quantity": 10
+  }
+}

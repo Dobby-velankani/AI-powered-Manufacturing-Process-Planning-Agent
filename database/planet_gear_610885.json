@@ -1,0 +1,407 @@
+{
+  "part": {
+    "article_number": "610885",
+    "description": "Planetenrad (Planet Gear)",
+    "mating_gear": {
+      "article_number": "610884",
+      "number_of_teeth": 12
+    },
+    "centre_distance_mm": 23.3605
+  },
+
+  "material": {
+    "grade": "16MnCrS5",
+    "form": "Round bar",
+    "recommended_blank_diameter_mm": [40, 42],
+    "condition": "Annealed or normalized",
+    "notes": [
+      "Verify material test certificate and heat number",
+      "No decarburization, deep scale or surface cracking",
+      "Chemistry suitable for case carburizing",
+      "Do not substitute C45 or EN8"
+    ]
+  },
+
+  "gear_parameters": {
+    "reference_profile": "DIN 3972",
+    "reference_profile_standard": "DIN 867",
+    "normal_module_mn": 0.85,
+    "number_of_teeth_z": 42,
+    "pressure_angle_deg": 20,
+    "helix_angle_deg": 0,
+    "gear_type": "Spur gear",
+    "profile_shift_coefficient_x": -0.02,
+    "pitch_diameter_d_mm": 35.7,
+    "face_width_b_mm": 22,
+    "tip_diameter": {
+      "min_mm": 37.201,
+      "max_mm": 37.309,
+      "theoretical_mm": 37.365,
+      "process_target_mm": 37.25
+    },
+    "root_diameter": {
+      "min_mm": 33.376,
+      "max_mm": 33.484,
+      "theoretical_mm": 33.54
+    },
+    "span_measurement": {
+      "over_k_teeth": 5,
+      "Wk_min_mm": 11.724,
+      "Wk_max_mm": 11.761,
+      "Wk_midpoint_mm": 11.7425
+    },
+    "gear_quality_standard": "ISO 1328",
+    "gear_quality_grade": 9,
+    "tooth_thickness_tolerance_standard": "DIN 58405",
+    "tooth_thickness_tolerance_class": "9g"
+  },
+
+  "bore": {
+    "nominal_mm": 21,
+    "fit": "N6",
+    "min_mm": 20.976,
+    "max_mm": 20.989,
+    "tolerance_microns": 13,
+    "process_target_min_mm": 20.982,
+    "process_target_max_mm": 20.984,
+    "chamfers": {
+      "size_mm": 0.5,
+      "angle_deg": 30,
+      "both_sides": true
+    },
+    "pre_heat_treatment_allowance_on_diameter_mm": [0.05, 0.10]
+  },
+
+  "width": {
+    "finished_min_mm": 21.900,
+    "finished_max_mm": 22.000,
+    "process_target_mm": 21.95,
+    "pre_heat_treatment_typical_mm": [22.10, 22.20],
+    "face_grinding_allowance_total_mm": [0.10, 0.20]
+  },
+
+  "tooth_end_chamfer": {
+    "angle_deg": 5,
+    "both_ends": true,
+    "must_extend_below_root_circle": true,
+    "chamfer_termination_diameter_approx_mm": 33.3
+  },
+
+  "surface_finish": {
+    "surface_b_Ra_um": 1.6,
+    "surface_c_Ra_um": 3.2
+  },
+
+  "geometrical_tolerances": [
+    {
+      "type": "runout_or_parallelism",
+      "value_mm": 0.02,
+      "datum": "A",
+      "datum_description": "End face",
+      "note": "Confirm exact type (runout, parallelism) with designer before production release"
+    }
+  ],
+
+  "heat_treatment": {
+    "process": "Case hardened and tempered (Einsatzgehärtet und angelassen)",
+    "surface_hardness_HV_min": 650,
+    "surface_hardness_HV_max": 750,
+    "effective_case_depth_CHD_min_mm": 0.12,
+    "effective_case_depth_CHD_max_mm": 0.22,
+    "in_house": false,
+    "subcontract": true,
+    "reason": "No carburizing furnace in equipment list",
+    "process_requirements": [
+      "Controlled gas or vacuum carburizing",
+      "Suitable fixture to reduce gear and bore distortion",
+      "Quench method appropriate for small gears",
+      "Tempering after quenching",
+      "Separate and protect parts to avoid tooth-to-tooth impact",
+      "Avoid aggressive shot blasting of tooth flanks"
+    ],
+    "certifications_required": [
+      "Heat-treatment certificate",
+      "Hardness test results",
+      "Microhardness traverse or witness coupon for CHD verification"
+    ]
+  },
+
+  "process_sequence": [
+    {
+      "step": 1,
+      "name": "Material Procurement",
+      "in_house": true,
+      "machine": null,
+      "description": "Procure certified 16MnCrS5 round bar (Ø40 or Ø42 mm)",
+      "checks": [
+        "Material test certificate and heat number",
+        "Annealed or normalized condition",
+        "No decarburization, scale or surface cracking",
+        "Chemistry suitable for carburizing"
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Saw Cutting",
+      "in_house": true,
+      "machine": "Lexon band-saw machine",
+      "cut_length_mm": [23, 24],
+      "notes": [
+        "Leave allowance for facing and grinding",
+        "Remove heavy saw burrs",
+        "No accuracy requirement on saw-cut face"
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Soft Turning — First Setup",
+      "in_house": true,
+      "machine_prototype": "Conventional turning machine",
+      "machine_production": "ACE CNC turning machine",
+      "fixture": "Bored soft jaws",
+      "operations": [
+        "Face the first side",
+        "Centre drill and drill through",
+        "Rough bore the hole",
+        "Finish-turn pre-heat-treatment bore (leave grinding allowance 0.05–0.10 mm on diameter)",
+        "Turn outside gear blank diameter to process target ~Ø37.25 mm",
+        "Turn edge relief if required",
+        "Preliminary bore chamfer (light pass only)"
+      ],
+      "notes": [
+        "Do not finish bore to N6 before heat treatment",
+        "Machine OD and bore in same or accurately related setup for concentricity"
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Soft Turning — Second Setup",
+      "in_house": true,
+      "machine_prototype": "Conventional turning machine",
+      "machine_production": "ACE CNC turning machine",
+      "fixture": "Precision expanding mandrel or soft jaws on previously machined diameter",
+      "operations": [
+        "Face the second side",
+        "Bring width to pre-heat-treatment dimension (~22.10–22.20 mm)",
+        "Check face parallelism",
+        "Complete preliminary 0.5 × 30° bore chamfers",
+        "Deburr carefully"
+      ],
+      "process_controls": {
+        "OD_to_bore_concentricity_max_mm": 0.02,
+        "face_to_bore_squareness_max_mm": 0.02,
+        "width_variation_max_mm": 0.02
+      }
+    },
+    {
+      "step": 5,
+      "name": "Gear Hobbing",
+      "in_house": false,
+      "subcontract": true,
+      "reason": "No gear hobbing or shaping machine in equipment list",
+      "fixture_at_vendor": "Precision expanding arbor through bore",
+      "data_for_vendor": {
+        "number_of_teeth": 42,
+        "normal_module": 0.85,
+        "pressure_angle_deg": 20,
+        "helix_angle_deg": 0,
+        "profile_shift": -0.02,
+        "reference_system": "DIN 3972 / DIN 867",
+        "gear_quality": "ISO 1328 grade 9",
+        "tooth_thickness_tolerance": "DIN 58405 9g",
+        "span_over_5_teeth_mm": { "min": 11.724, "max": 11.761 },
+        "tip_diameter_mm": { "min": 37.201, "max": 37.309 },
+        "root_diameter_mm": { "min": 33.376, "max": 33.484 }
+      },
+      "hob_requirement": "Module 0.85 hob only — no general-purpose form cutter",
+      "pre_ht_wk_trial_procedure": [
+        "Manufacture small trial batch",
+        "Record Wk before heat treatment",
+        "Heat treat using intended production cycle",
+        "Record Wk and gear errors after heat treatment",
+        "Establish required pre-heat-treatment compensation"
+      ]
+    },
+    {
+      "step": 6,
+      "name": "Tooth-End Chamfering and Deburring",
+      "in_house": false,
+      "subcontract": true,
+      "preferred": "Combine with hobbing at gear vendor",
+      "chamfer_spec": {
+        "angle_deg": 5,
+        "both_ends": true,
+        "must_include_root_circle": true,
+        "termination_diameter_approx_mm": 33.3
+      },
+      "checks": [
+        "All 42 tooth spaces confirmed",
+        "No rolled burrs on flanks or root fillets",
+        "Chamfer depth survives planned face-grinding allowance removal"
+      ]
+    },
+    {
+      "step": 7,
+      "name": "Pre-Heat-Treatment Inspection",
+      "in_house": true,
+      "items": [
+        "Material traceability",
+        "Blank OD",
+        "Bore size",
+        "Width and grinding allowance",
+        "Gear span over 5 teeth — record Wk",
+        "Tooth count and tooth form",
+        "Tooth-tip diameter",
+        "Root diameter or hob depth",
+        "Gear runout",
+        "Tooth-end chamfers present",
+        "Burr-free roots"
+      ]
+    },
+    {
+      "step": 8,
+      "name": "Case Hardening and Tempering",
+      "in_house": false,
+      "subcontract": true,
+      "target_hardness_HV": { "min": 650, "max": 750 },
+      "target_CHD_mm": { "min": 0.12, "max": 0.22 }
+    },
+    {
+      "step": 9,
+      "name": "Post-Heat-Treatment Face Grinding",
+      "in_house": true,
+      "machines": ["Perfect surface grinding machine", "HMT surface grinding machine"],
+      "sequence": [
+        "Inspect for distortion and cracks",
+        "Grind datum face A first",
+        "Place datum A on clean precision fixture or magnetic-chuck support",
+        "Grind opposite face",
+        "Finish width to 21.900–22.000 mm (target ~21.95 mm)"
+      ],
+      "surface_finish_Ra_um": 1.6,
+      "geometrical_tolerance_mm": 0.02,
+      "datum": "A",
+      "post_grinding": ["Demagnetize", "Clean thoroughly"]
+    },
+    {
+      "step": 10,
+      "name": "Final Bore Grinding or Honing",
+      "in_house": "conditional",
+      "machine": "Cylindrical grinding machine with internal attachment",
+      "subcontract_if": "No internal grinding attachment available",
+      "bore_spec_mm": { "min": 20.976, "max": 20.989 },
+      "process_target_mm": { "min": 20.982, "max": 20.984 },
+      "fixture_recommendation": "Locate from gear pitch circle or accurately referenced tooth fixture",
+      "post_grinding_checks": [
+        "Check at front, centre and rear of bore",
+        "Check in at least two directions at each position",
+        "Check taper and ovality",
+        "Refinish 0.5 × 30° chamfers if partly removed",
+        "Remove minimum material to preserve carburized layer"
+      ]
+    },
+    {
+      "step": 11,
+      "name": "Final Deburring and Cleaning",
+      "in_house": true,
+      "permitted_methods": [
+        "Fine ceramic stone",
+        "Nylon abrasive brush",
+        "Controlled micro-deburring"
+      ],
+      "prohibited": [
+        "Rounding off involute tooth edges",
+        "Damaging root fillet",
+        "Polishing through carburized case",
+        "WEDM after heat treatment",
+        "Uncontrolled hand grinding on tooth flanks"
+      ],
+      "post_clean": "Apply temporary rust-preventive oil after final inspection"
+    }
+  ],
+
+  "machine_allocation": [
+    { "operation": "Raw material cutting",               "equipment": "Lexon band-saw machine",                                              "in_house": true  },
+    { "operation": "Soft blank turning (prototype)",     "equipment": "Conventional turning machine",                                        "in_house": true  },
+    { "operation": "Soft blank turning (production)",    "equipment": "ACE CNC turning machine",                                             "in_house": true  },
+    { "operation": "Fixture and soft-jaw preparation",   "equipment": "Manual milling machine / VMC",                                        "in_house": true  },
+    { "operation": "Gear hobbing",                       "equipment": "Subcontract — gear hobbing machine not in equipment list",             "in_house": false },
+    { "operation": "Tooth-end chamfering",               "equipment": "Subcontract — preferably combined with hobbing at gear vendor",        "in_house": false },
+    { "operation": "Case hardening and tempering",       "equipment": "Subcontract — carburizing furnace not in equipment list",              "in_house": false },
+    { "operation": "Face grinding",                      "equipment": "Perfect or HMT surface grinding machine",                             "in_house": true  },
+    { "operation": "Bore grinding",                      "equipment": "Cylindrical grinder (ID attachment required); else subcontract",       "in_house": "conditional" },
+    { "operation": "Gear accuracy inspection",           "equipment": "Subcontract — gear measuring machine not in equipment list",           "in_house": false }
+  ],
+
+  "inspection_plan": {
+    "dimensional": [
+      { "characteristic": "Bore diameter",       "min_mm": 20.976, "max_mm": 20.989, "method": "Air gauge, calibrated bore gauge or internal comparator" },
+      { "characteristic": "Width",               "min_mm": 21.900, "max_mm": 22.000, "method": "Micrometer" },
+      { "characteristic": "Face runout / relation", "tolerance_mm": 0.02, "datum": "A", "method": "Precision mandrel, surface plate and dial indicator" },
+      { "characteristic": "Tip diameter",        "min_mm": 37.201, "max_mm": 37.309, "method": "Micrometer over opposite tooth tips" },
+      { "characteristic": "Root diameter",       "min_mm": 33.376, "max_mm": 33.484, "method": "Gear measuring machine or optical method" },
+      { "characteristic": "Bore taper and ovality", "method": "Bore gauge at multiple axial and angular positions" },
+      { "characteristic": "Bore chamfer 0.5 × 30°", "method": "Optical comparator or chamfer gauge" },
+      { "characteristic": "Tooth-end chamfer 5°",   "method": "Optical comparator or profile projector" }
+    ],
+    "gear": {
+      "number_of_teeth": 42,
+      "span_over_5_teeth_mm": { "min": 11.724, "max": 11.761 },
+      "quality_standard": "ISO 1328 grade 9",
+      "parameters": ["Pitch error", "Profile error", "Lead error", "Radial runout", "Tooth flank damage"],
+      "functional_checks": [
+        "Contact pattern inspection",
+        "Rolling test with mating gear 610884 (z = 12)",
+        "Functional centre distance 23.3605 mm"
+      ],
+      "note": "Span micrometer alone does NOT prove ISO 1328 grade 9. Full gear measurement on gear measuring centre required."
+    },
+    "heat_treatment": {
+      "surface_hardness_HV": { "min": 650, "max": 750, "method": "Vickers hardness test" },
+      "CHD_mm": { "min": 0.12, "max": 0.22, "method": "Microhardness traverse or witness coupon" },
+      "additional_checks": [
+        "Case pattern and microstructure",
+        "No cracks after quenching",
+        "No excessive decarburization",
+        "Heat-treatment certificate linked to batch"
+      ]
+    }
+  },
+
+  "drawing_clarifications": [
+    {
+      "item": 1,
+      "topic": "Heat-treatment scope",
+      "description": "Confirm whether hardness and CHD apply only to gear teeth or also to bore and faces. Affects grinding allowance and whether bore may be masked during carburizing."
+    },
+    {
+      "item": 2,
+      "topic": "Tip diameter values",
+      "description": "Drawing shows theoretical Ø37.365 mm but also explicit limits Ø37.201–37.309 mm. Production should use explicit limits — confirm with designer."
+    },
+    {
+      "item": 3,
+      "topic": "Root diameter values",
+      "description": "Theoretical Ø33.54 mm shown alongside limits Ø33.376–33.484 mm. Confirm which governs for production acceptance."
+    },
+    {
+      "item": 4,
+      "topic": "Bore-to-gear concentricity",
+      "description": "No tolerance specified for pitch-circle runout relative to Ø21 bore. Functionally critical for a planet gear — must be confirmed."
+    },
+    {
+      "item": 5,
+      "topic": "0.02 geometrical tolerance callout",
+      "description": "Runout-type symbol references datum A (end face). Confirm exact type (runout, parallelism or other) and which surface is controlled."
+    }
+  ],
+
+  "wedm_policy": {
+    "normal_production": false,
+    "reasons": [
+      "WEDM after carburizing removes hardened tooth-flank case and leaves EDM recast layer",
+      "WEDM before carburizing is possible for one-off development parts but slower and requires accurate involute programming plus recast layer removal"
+    ],
+    "permitted_use": "Approved prototype contingency only — not normal production route"
+  }
+}

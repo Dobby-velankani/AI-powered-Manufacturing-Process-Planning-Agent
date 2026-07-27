@@ -1,0 +1,278 @@
+{
+  "part": {
+    "sap_number": "440524",
+    "drawing_number": "EM182-47-51-11-01",
+    "description": "Schweissplaettchen 1.75 Schwerlastkette / Welding plates 1.75 heavy load chain",
+    "manufacturer": "Ersa GmbH & Co. KG - EM",
+    "drawing_date": "2026-07-01",
+    "drawn_by": "Klinger",
+    "scale": "5:1",
+    "sheet": "1 of 1",
+    "format": "A4",
+    "geometry_master": "DXF data - drawing note: manufactured according to DXF-data"
+  },
+  "material": {
+    "grade": "S235",
+    "standard": "EN 10025",
+    "nominal_thickness_mm": 1.75,
+    "surface_area_mm2": 140.08,
+    "volume_mm3": 62.61,
+    "weight_g": 0.49,
+    "notes": [
+      "Verify mill certificate and heat number",
+      "Check flatness and absence of rust or scale before processing",
+      "Thickness 1.75 mm is the drawing baseline - separate revision required for 3 mm and 10 mm variants"
+    ]
+  },
+  "geometry": {
+    "overall_width_mm": 10.62,
+    "overall_height_mm": 5.0,
+    "included_angle_deg": 58.64,
+    "top_width_mm": 3.0,
+    "top_offset_mm": 1.5,
+    "corner_radii": {
+      "top_R1_count": 2, "top_R1_mm": 1.0,
+      "bottom_R01_count": 2, "bottom_R01_mm": 0.1
+    },
+    "holes": {
+      "count": 4, "diameter_mm": 1.0, "designation": "4x O1",
+      "individual_tolerance": "not specified - general tolerance applies",
+      "note": "Hole position and diameter to be verified against DXF"
+    }
+  },
+  "tolerances": {
+    "dimension_tolerance_standard": "EN ISO 14405",
+    "general_tolerance": "EN ISO 2768-mK",
+    "tolerance_principle": "ISO 8015",
+    "form_and_position_standard": "EN ISO 1101",
+    "surface_standard": "EN ISO 21920-1",
+    "unspecified_edges": {
+      "standard": "ISO 13715", "value_mm": -0.1,
+      "meaning": "No positive projecting burr permitted; edge break not to exceed 0.1 mm"
+    },
+    "profile_tolerance_mm": 0.1,
+    "face_control": {
+      "symbol": "flatness or parallelism - confirm with designer",
+      "value_mm": 0.05, "datum": "A",
+      "note": "ISO flatness normally does not reference a datum - confirm if flatness or parallelism to A"
+    }
+  },
+  "hole_feasibility_by_thickness": [
+    {
+      "thickness_mm": 1.75, "hole_diameter_mm": 1.0, "ratio_d_to_t": 0.57,
+      "press_punching_feasible": "Marginal - possible only with specialized micro-punching tooling; high punch-breakage risk",
+      "recommended_method": "Wire EDM or specialized micro-punch in progressive die"
+    },
+    {
+      "thickness_mm": 3.0, "hole_diameter_mm": 1.0, "ratio_d_to_t": 0.33,
+      "press_punching_feasible": "Not recommended - punch too slender, slug jamming, excessive taper",
+      "recommended_method": "EDM start hole + Wire EDM to finished O1"
+    },
+    {
+      "thickness_mm": 10.0, "hole_diameter_mm": 1.0, "ratio_d_to_t": 0.10,
+      "press_punching_feasible": "Not feasible - punch buckles and breaks",
+      "recommended_method": "EDM start hole 0.3-0.5 mm + Wire EDM finish to O1"
+    }
+  ],
+  "variants": {
+    "v1_75mm": {
+      "thickness_mm": 1.75,
+      "drawing_revision_required": false,
+      "production_route": "Progressive press die for regular production; WEDM for samples or small batch",
+      "press_route": {
+        "preferred_press": "Hensel 25T mechanical press",
+        "alternative_press": "Singhal SNX 63T mechanical power press",
+        "avoid": "110T press - unnecessarily large",
+        "estimated_cutting_perimeter_mm": 40,
+        "estimated_cutting_force_N": 24500,
+        "estimated_working_requirement_tonnes": 4,
+        "force_note": "40mm x 1.75mm x 350 N/mm2 = ~2.5T; with stripping and safety margin ~3.5-4T; 25T sufficient",
+        "progressive_die_stations": [
+          {
+            "station": 1, "name": "Hole piercing",
+            "operations": ["Pierce 4 x O1 mm holes", "Pierce pilot holes in scrap carrier"],
+            "note": "Pierce while material is full strip - do not blank first"
+          },
+          {
+            "station": 2, "name": "Profile trimming",
+            "operations": ["Blank two inclined sides", "Blank top edge", "Form two R1 corners"],
+            "note": "Retain component on strip via bottom edge or carrier tabs"
+          },
+          {
+            "station": 3, "name": "Flattening and cutoff",
+            "operations": ["Restrike between flat pressure pads", "Produce final bottom edge and 10.62 mm", "Form R0.1 corners", "Cut free and eject"],
+            "note": "Restrike needed to achieve 0.05 mm face requirement"
+          }
+        ],
+        "tooling": {
+          "hole_punch_material": "PM-HSS M2 or ASP23",
+          "hole_punch_hardness_HRC": [60, 64],
+          "profile_die_material": "D2 / 1.2379",
+          "profile_die_hardness_HRC": [58, 60],
+          "die_shoe": "C45 or pre-hardened tool steel",
+          "clearance_piercing_per_side_mm": [0.06, 0.08],
+          "clearance_blanking_per_side_mm": [0.08, 0.10],
+          "punch_guidance": "Close-guided stripper plate, replaceable inserts, high-accuracy guide pillars",
+          "R01_corners": "0.10-0.15 mm WEDM wire with at least one skim cut; verify radius optically"
+        },
+        "strip_layout": {
+          "part_width_transverse_mm": 10.62,
+          "part_height_feed_direction_mm": 5.0,
+          "estimated_pitch_mm": [6.5, 7.0],
+          "estimated_strip_width_mm": [14, 16],
+          "note": "Preliminary only - design from customer DXF"
+        },
+        "slug_control": ["Slug-retention die geometry", "Air blow or vacuum extraction", "Spring ejector punches if needed", "Regular cleaning access"]
+      },
+      "wedm_sample_route": {
+        "applicable_for": "Samples or small order where press tooling is uneconomical",
+        "steps": [
+          "Cut S235 blanks with 3-5 mm stock around profile",
+          "Clamp in sandwich fixture between sacrificial plates",
+          "Drill 4 x O1 holes on Makino or ACE VMC from DXF coordinates",
+          "Stack-cut contour on Makino WEDM using 0.10-0.15 mm wire",
+          "Leave small retaining tabs during WEDM",
+          "Remove tabs carefully, lightly deburr",
+          "Flatten between ground plates if required",
+          "Inspect using DXF overlay"
+        ],
+        "drilling_parameters": {
+          "drill_type": "New short-length carbide drill",
+          "max_spindle_runout_mm": 0.01,
+          "speed_rpm": [8000, 12000],
+          "feed_mm_per_rev": [0.015, 0.025],
+          "peck_depth_mm": [0.3, 0.5],
+          "backing_plate": true,
+          "note": "Do not use radial or manual drill - runout and low RPM will break O1 drill"
+        }
+      }
+    },
+    "v3mm": {
+      "thickness_mm": 3.0,
+      "drawing_revision_required": true,
+      "revision_items": ["Update thickness 1.75 to 3.00 mm", "Update weight and volume", "Define thickness tolerance", "Confirm flatness/parallelism requirement", "Update title block"],
+      "production_route": "Preliminary surface grinding - EDM start holes - WEDM O1 holes - WEDM profile with tabs - final surface grinding in skeleton - tab release - deburr - inspect",
+      "press_punching": "Not recommended - O1 ratio 0.33 too low",
+      "process_sequence": [
+        { "step": 1, "name": "Material preparation", "description": "Cut S235 plate to nesting size e.g. 75x75 or 100x100 mm", "initial_thickness_mm": [3.15, 3.25], "note": "No individual 10.62x5 blanks" },
+        { "step": 2, "name": "Preliminary surface grinding", "machine": "Perfect or HMT surface grinder", "grind_to_mm": [3.08, 3.10], "allowance_per_face_mm": [0.04, 0.05] },
+        { "step": 3, "name": "EDM starter holes", "machine": "Phillips PDE 43C or equivalent", "diameter_mm": [0.3, 0.5], "through_plate": true },
+        { "step": 4, "name": "Wire EDM - O1 holes", "machine": "Makino CNC WEDM", "wire_mm": [0.10, 0.15], "sequence": ["Rough-cut all holes", "One skim cut", "Measure and correct offset", "Continue remaining components"] },
+        { "step": 5, "name": "Wire EDM - external profile", "machine": "Makino CNC WEDM", "wire_mm": [0.10, 0.15], "retaining_tabs": { "count": [2, 3], "width_mm": [0.5, 0.8], "thickness_mm": [0.15, 0.25] }, "note": "Cut holes before profile" },
+        { "step": 6, "name": "Final surface grinding in skeleton", "machine": "Perfect or HMT surface grinder", "final_thickness_mm": 3.0, "finish_pass_mm": [0.003, 0.005], "precautions": ["No heavy cuts", "All parts on at least two tabs", "Clean O1 holes after grinding", "Demagnetize"] },
+        { "step": 7, "name": "Tab release", "preferred": "WEDM cut", "prohibited": "Do not bend parts free" },
+        { "step": 8, "name": "Deburring and cleaning", "methods": ["Fine ceramic stone", "Fine abrasive brush"], "cleaning": ["Degrease", "Remove EDM residue", "Dry", "Rust protection compatible with welding"] }
+      ],
+      "thickness_allowance_table": [
+        { "stage": "Purchased plate", "thickness_mm": "3.15-3.25" },
+        { "stage": "Preliminary grinding", "thickness_mm": "3.08-3.10" },
+        { "stage": "After first final face", "thickness_mm": "3.04-3.05" },
+        { "stage": "Final thickness", "thickness_mm": "3.00 per revised tolerance" }
+      ]
+    },
+    "v10mm": {
+      "thickness_mm": 10.0,
+      "drawing_revision_required": true,
+      "revision_items": ["Update thickness 1.75 to 10.00 mm", "Update weight and volume", "Define thickness tolerance", "Redefine holes as through-holes 10 mm deep", "Update title block"],
+      "production_route": "Band-saw blank - face mill if needed - surface grind to 10 mm - super-drill EDM start holes - WEDM O1 holes - WEDM profile with tabs - tab removal - deburr - inspect",
+      "press_punching": "Not feasible - O1 ratio 0.10; punch buckles, slugs jam",
+      "process_sequence": [
+        { "step": 1, "name": "Revised drawing required", "mandatory": true },
+        { "step": 2, "name": "Material preparation", "plate_thickness_mm": [10.2, 10.5], "machine": "Lexon band-saw", "note": "No individual blanks before machining" },
+        { "step": 3, "name": "Prepare 10 mm thickness", "machine_rough": "ACE VMC or Makino VMC", "machine_finish": "Perfect or HMT surface grinder", "rough_target_mm": [10.10, 10.15], "final_mm": 10.0 },
+        { "step": 4, "name": "EDM starter holes", "machine": "Phillips PDE 43C super-drilling machine", "diameter_mm": [0.3, 0.5], "note": "Drill all locations while in large plate" },
+        { "step": 5, "name": "Wire EDM - O1 holes", "machine": "Makino CNC WEDM", "wire_mm": [0.10, 0.15], "depth_ratio": 10, "sequence": ["Rough-cut", "1-2 skim cuts", "Measure first part", "Correct offset", "Continue"] },
+        { "step": 6, "name": "Wire EDM - external profile", "machine": "Makino CNC WEDM", "wire_R01_mm": 0.10, "retaining_tabs": { "count": [2, 3], "width_mm": [0.5, 1.0], "thickness_mm": [0.15, 0.30] } },
+        { "step": 7, "name": "Tab removal", "preferred": "WEDM cut" },
+        { "step": 8, "name": "Deburring and cleaning", "methods": ["Fine ceramic stone", "Fine abrasive brush"], "cleaning": ["Degrease", "Remove EDM residue", "Dry", "Rust protection"] }
+      ],
+      "quantity_vs_process": [
+        { "quantity": "1-20 pcs",            "process": "Ground plate - EDM start holes - WEDM holes and profile" },
+        { "quantity": "20-500 pcs",           "process": "Multi-component WEDM nesting in one prepared plate" },
+        { "quantity": "500-5000 pcs",         "process": "Larger nested plates, automated super-drilling and WEDM" },
+        { "quantity": "Very high annual vol.", "process": "Study fine-blanking for profile; secondary process still needed for O1 holes" }
+      ]
+    }
+  },
+  "machine_allocation": [
+    { "operation": "Plate blank cutting",              "equipment": "Lexon band-saw",                                        "in_house": true },
+    { "operation": "Face milling (10 mm variant)",     "equipment": "ACE VMC or Makino VMC",                                 "in_house": true },
+    { "operation": "Surface grinding",                 "equipment": "Perfect or HMT surface grinding machine",               "in_house": true },
+    { "operation": "EDM starter holes",                "equipment": "Phillips PDE 43C super-drilling machine",               "in_house": true },
+    { "operation": "Wire EDM - O1 holes",              "equipment": "Makino CNC WEDM",                                       "in_house": true },
+    { "operation": "Wire EDM - external profile",      "equipment": "Makino CNC WEDM",                                       "in_house": true },
+    { "operation": "Wire EDM - tab release",           "equipment": "Makino CNC WEDM",                                       "in_house": true },
+    { "operation": "VMC drilling (1.75 mm samples)",   "equipment": "Makino VMC or ACE VMC",                                 "in_house": true },
+    { "operation": "Press stamping (1.75 mm regular)", "equipment": "Hensel 25T preferred; SNX 63T alternative",             "in_house": true },
+    { "operation": "Progressive die manufacture",      "equipment": "Makino WEDM, EDM, VMCs, surface grinders",              "in_house": true },
+    { "operation": "Deburring",                        "equipment": "Tumbler or brush",                                      "in_house": true },
+    { "operation": "Washing/degreasing",               "equipment": "Cleaning station",                                      "in_house": true },
+    { "operation": "Final inspection",                 "equipment": "Profile projector / vision machine / CMM",              "in_house": true }
+  ],
+  "machines_not_recommended": [
+    { "machine": "Amada turret punch",       "reason": "O1 micro-punch needed; nibbling cannot hold 0.1 profile tolerance; R0.1 corners unreliable; tiny parts fall into machine" },
+    { "machine": "Radial drilling machine",  "reason": "Spindle runout and low RPM will break O1 drills" },
+    { "machine": "DRO drilling machine",     "reason": "Same issue as radial drill for O1 holes" },
+    { "machine": "110T press",               "reason": "Unnecessarily large for this component" }
+  ],
+  "shop_floor_process_1_75mm_press": [
+    { "op": 10,  "name": "Drawing and DXF review",       "area": "Engineering",            "notes": "Confirm DXF revision, units, scale, burr side and datum A" },
+    { "op": 20,  "name": "Incoming material inspection", "area": "Inspection",             "notes": "S235 EN10025 certificate, thickness, flatness, rust and scale" },
+    { "op": 30,  "name": "Strip preparation",            "area": "Supplier/slitting",      "notes": "Use slit strip or coil; do not manually cut each blank" },
+    { "op": 40,  "name": "Progressive tool setup",       "area": "Hensel 25T or SNX 63T",  "notes": "Set shut height, feeder pitch, guides and lubrication" },
+    { "op": 50,  "name": "First-off piercing trial",     "area": "Press",                  "notes": "Inspect O1 holes, slug pulling, punch marks, distortion" },
+    { "op": 60,  "name": "Profile and cutoff trial",     "area": "Press",                  "notes": "Check complete contour against DXF" },
+    { "op": 70,  "name": "Restrike/flatten",             "area": "Tool station",           "notes": "Achieve 0.05 face requirement" },
+    { "op": 80,  "name": "Deburring",                    "area": "Tumbler/brush",          "notes": "Remove burr without rounding R0.1 corners" },
+    { "op": 90,  "name": "Washing/degreasing",           "area": "Cleaning",               "notes": "Critical - part is later welded" },
+    { "op": 100, "name": "Final inspection",             "area": "Quality",                "notes": "Profile, hole size, position, burr and face condition" },
+    { "op": 110, "name": "Packing",                      "area": "Packing",                "notes": "Prevent tangling, rust and damage" }
+  ],
+  "inspection_plan": {
+    "outer_profile": {
+      "methods": ["Optical profile projector with DXF overlay", "Vision measuring machine with DXF overlay", "CMM with small-part fixture"],
+      "profile_tolerance_mm": 0.1,
+      "note": "DXF is master geometry - do not reconstruct from PDF dimensions"
+    },
+    "holes": {
+      "diameter_check": "Calibrated pin gauges or optical measurement",
+      "position_check": "DXF overlay - hole-to-hole and hole-to-profile",
+      "additional_checks": ["Taper and breakout", "Cracks in ligament near top edge"]
+    },
+    "face_requirement": {
+      "tolerance_mm": 0.05, "datum": "A",
+      "method": "Place datum A on flat fixture; scan opposite face with 0.001 mm lever indicator",
+      "caution": "Do not clamp heavily - hides distortion"
+    },
+    "thickness": { "method": "Micrometer + surface plate and lever indicator" },
+    "edges_and_burr": {
+      "standard": "ISO 13715", "value_mm": -0.1,
+      "checks": ["Hole-exit burr", "Outer blanking-edge burr"],
+      "note": "Keep burrs on one consistent face; confirm burr side with customer"
+    }
+  },
+  "drawing_clarifications": [
+    { "item": 1, "topic": "DXF file required", "description": "Drawing states manufactured per DXF. DXF must be obtained before tool design or CNC programming." },
+    { "item": 2, "topic": "O1 hole high-risk feature", "description": "Hole is 0.57x material thickness at 1.75 mm. Tool life needs trials. At 3 mm and 10 mm conventional punching is not feasible." },
+    { "item": 3, "topic": "Top hole edge distance", "description": "~1 mm material between hole and top edge. Strong pressure pad required in die." },
+    { "item": 4, "topic": "0.05 face callout", "description": "Symbol references datum A but ISO flatness normally does not reference a datum. Confirm flatness or parallelism to A." },
+    { "item": 5, "topic": "Burr face orientation", "description": "Confirm which face carries the stamping burr. Cleaner face should be datum A." },
+    { "item": 6, "topic": "Boxed 1.75 thickness", "description": "Confirm if basic dimension with tolerance or nominal purchased sheet thickness." },
+    { "item": 7, "topic": "Annual quantity", "description": "Needed to decide between WEDM sample route and investment in progressive press tooling." },
+    { "item": 8, "topic": "3 mm and 10 mm variants", "description": "Both need formally revised drawing and DXF. Do not manufacture against 1.75 mm drawing." }
+  ],
+  "summary_recommendations": {
+    "1_75mm_samples": "VMC drilling + fine-wire WEDM stack cutting",
+    "1_75mm_production": "Three-station progressive die on Hensel 25T press",
+    "1_75mm_alternative": "SNX 63T if 25T bed or shut height insufficient",
+    "3mm": "Ground plate - EDM start holes - WEDM holes and profile - surface grind in skeleton - WEDM tab release",
+    "10mm": "Band-saw blank - face mill/grind to 10 mm - super-drill EDM start holes - WEDM holes - WEDM profile - tab release",
+    "do_not": [
+      "Punch O1 holes in 3 mm or 10 mm material",
+      "Use radial or manual drill for O1 holes",
+      "Use Amada turret punch as normal production process",
+      "Release any tool without the original DXF",
+      "Manufacture 3 mm or 10 mm variants against the 1.75 mm drawing"
+    ]
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "part": {
+    "drawing_number": "VI-SR5-25-72-25-18-R0",
+    "assembly_drawing": "VI-SR5-25-72-R0",
+    "description": "Dowel / Hollow Precision Sleeve",
+    "drawn_by": "Gegyasa",
+    "date": "02/07/26",
+    "scale": "1:1",
+    "size": "A3",
+    "sheet": "01/01",
+    "revision": "00",
+    "company": "Velankani Information Systems Pvt. Ltd., Bangalore, India",
+    "material": "EN31",
+    "material_note": "High-carbon chromium bearing steel (equivalent BS 970:1991 535A99). Normally used in hardened and ground condition for wear-resistant applications.",
+    "quantity": 4,
+    "finished_length_mm": 30.0,
+    "OD_range_mm": [7.98, 8.00],
+    "ID_range_mm": [5.30, 5.32],
+    "nominal_wall_thickness_mm": 1.35,
+    "minimum_wall_thickness_mm": 1.33,
+    "chamfer": "0.5 x 45 degrees (both ends — 2x callout recommended on drawing)",
+    "drawing_weight_kg": 1.2,
+    "actual_weight_per_piece_g": 6.6,
+    "actual_weight_4_pieces_g": 26.6,
+    "weight_note": "Title-block mass of 1.2 kg is incorrect. Calculated mass per piece ~6.6 g; four pieces ~26.6 g.",
+    "general_tolerance": "One-decimal: +/- 0.2 mm",
+    "internal_production_length_target_mm": "30.00 +/- 0.05 mm"
+  },
+
+  "drawing_clarifications": [
+    {
+      "item": 1,
+      "topic": "Heat treatment not specified",
+      "description": "EN31 is normally selected for hardened, wear-resistant components. However, heat treatment and target hardness are not called out on the drawing. Recommend adding: Through harden and temper to 58-62 HRC or confirm with designer that the component is used soft."
+    },
+    {
+      "item": 2,
+      "topic": "Chamfer callout",
+      "description": "Chamfer appears on both ends in the model but callout points to one end only. Change to: 2x 0.5 x 45 degrees to avoid ambiguity."
+    },
+    {
+      "item": 3,
+      "topic": "Surface finish not specified",
+      "description": "Recommended values: OD Ra <= 0.4 um, ID Ra <= 0.8 um, faces Ra <= 1.6 um."
+    },
+    {
+      "item": 4,
+      "topic": "Concentricity / runout between ID and OD not defined",
+      "description": "Recommended: Define OD axis as datum A. ID total runout relative to datum A <= 0.02 mm maximum."
+    },
+    {
+      "item": 5,
+      "topic": "General notes missing",
+      "description": "Add: Remove all burrs, No sharp edges, No grinding burns or decarburization."
+    },
+    {
+      "item": 6,
+      "topic": "Title-block weight incorrect",
+      "description": "Drawing shows 1.2 kg. Correct approximate weight per piece is ~6.6 g; four pieces ~26.6 g. Correct before drawing release."
+    }
+  ],
+
+  "dimensions": {
+    "finished_length_mm":     { "nominal": 30.0, "drawing_tolerance": "+/- 0.2 (one-decimal general)", "range_mm": [29.80, 30.20], "production_target_mm": "30.00 +/- 0.05" },
+    "OD_mm":                  { "nominal": 8.00, "tolerance": "-0.02 / 0",                             "range_mm": [7.98, 8.00],   "production_target_mm": 7.990 },
+    "ID_mm":                  { "nominal": 5.30, "tolerance": "+0.02 / 0",                             "range_mm": [5.30, 5.32],   "production_target_mm": 5.310 },
+    "wall_thickness_mm":      { "nominal": 1.35, "minimum_mm": 1.33 },
+    "chamfer_mm":             { "size_mm": 0.5,  "angle_deg": 45, "quantity": 2 }
+  },
+
+  "pre_heat_treatment_allowances": {
+    "OD_pre_HT_mm":      { "min_mm": 8.15, "max_mm": 8.20, "grinding_allowance_per_side_mm": "0.075-0.10" },
+    "ID_pre_HT_mm":      { "min_mm": 5.10, "max_mm": 5.15, "note": "Do not finish bore before hardening — thin wall may distort during quench" },
+    "length_pre_HT_mm":  { "min_mm": 30.30, "max_mm": 30.40 },
+    "chamfer_pre_HT_mm": { "approx": "0.35-0.40 x 45 degrees", "note": "Pre-machine chamfers to reduce quench-crack risk" }
+  },
+
+  "raw_material": {
+    "form": "EN31 spheroidized-annealed round bar",
+    "starting_diameter_mm": 10,
+    "blank_size": "O10 x 34 mm",
+    "rationale": "Solid round bar preferred over seamless tube for only 4 pieces. Annealed condition required for soft machining stage.",
+    "requirements": [
+      "Material test certificate required",
+      "Bar free from seams, cracks, excessive decarburization and bending",
+      "Do not mix different EN31 heat-treatment batches",
+      "Record heat number for traceability"
+    ]
+  },
+
+  "recommended_machine": {
+    "primary": "CNC turn-mill or Swiss-type CNC with sub-spindle and bar feeder",
+    "alternative": "CNC lathe with sub-spindle",
+    "rationale": "Both ID and OD can be produced in one clamping for best concentricity. Bar feeder enables unmanned production of 4 pieces."
+  },
+
+  "machining_sequence_principle": {
+    "rough_order": "ID first, then OD — in the same collet clamping",
+    "finish_order": "Semi-finish ID then finish-grind OD using ID as datum then final-hone ID",
+    "reason_for_ID_first": [
+      "At O10 mm starting bar the wall after O5 mm drilling is ~2.50 mm — nearly twice the finished 1.34 mm wall",
+      "Thicker wall reduces drill vibration, bore wandering, ovality and unequal wall thickness",
+      "Machining OD and ID in one setup aligns their axes",
+      "Finishing OD before drilling produces only ~1.35 mm wall during subsequent boring — high risk of distortion and eccentricity"
+    ],
+    "reason_for_ID_datum_in_finish": [
+      "Finished bore provides precise geometric reference for mandrel mounting",
+      "OD ground to the bore axis gives best ID-to-OD concentricity",
+      "Final honing after OD grinding corrects any small bore deformation from mandrel clamping"
+    ]
+  },
+
+  "machining_sequence_comparison": {
+    "summary": "ID-first is the best approach for both rough machining and finish grinding of this thin-wall dowel.",
+    "comparison_table": [
+      {
+        "sequence": "OD first, then ID",
+        "result": "Not preferred",
+        "reason": "When OD is turned to ~O8 mm first, wall after subsequent O5 mm drilling is only ~1.35 mm. This thin wall vibrates, deforms under collet pressure, causes bore wandering, ovality and heat-induced bore expansion during drilling."
+      },
+      {
+        "sequence": "ID first, then OD",
+        "result": "Better — good general method",
+        "reason": "Wall at time of drilling is ~2.50 mm (full O10 bar). Provides nearly twice the rigidity. Machining both ID and OD in one collet clamping aligns their axes."
+      },
+      {
+        "sequence": "Rough ID then rough OD then HT then finish ID then finish OD",
+        "result": "Best general production method",
+        "reason": "Separates soft-machining from precision finishing. Heat treatment distortion is dealt with during the grinding stages."
+      },
+      {
+        "sequence": "Rough ID then rough OD then HT then semi-finish ID then finish OD then final-hone ID",
+        "result": "Best for maximum dimensional accuracy",
+        "reason": "Semi-finishing ID first gives a reference for mandrel mounting. Grinding OD to the bore axis maximises concentricity. Final hone corrects any bore deformation from mandrel pressure."
+      }
+    ],
+    "why_OD_first_fails": {
+      "wall_thickness_during_drilling_mm": 1.35,
+      "calculation": "(8.00 - 5.30) / 2 = 1.35 mm wall when OD already turned to O8",
+      "risks": [
+        "Bore vibration and wandering during drilling",
+        "Ovality from thin wall under collet pressure",
+        "Bore expansion from drilling heat",
+        "Loss of concentricity between ID and OD",
+        "Further distortion during heat treatment"
+      ]
+    },
+    "why_ID_first_is_better": {
+      "wall_thickness_during_drilling_mm": 2.50,
+      "calculation": "(10.00 - 5.00) / 2 = 2.50 mm wall when drilling from full O10 bar",
+      "benefits": [
+        "Reduced drill vibration",
+        "Better bore straightness",
+        "Lower risk of ovality",
+        "Better collet support",
+        "Both rough ID and OD axes aligned in same clamping"
+      ]
+    },
+    "finish_grinding_sequence": {
+      "step_1": {
+        "operation": "Semi-finish internal grind",
+        "target_mm": "O5.305-5.310",
+        "leave_for_honing_mm": "0.005-0.010",
+        "purpose": "Provides accurate bore for mandrel location during OD grinding"
+      },
+      "step_2": {
+        "operation": "Finish-grind OD referenced from bore",
+        "mandrel_size_mm": "O5.302-5.306",
+        "mandrel_type": "Close-fitting solid arbor with axial clamping or low-pressure segmented mandrel",
+        "mandrel_warning": "Do not use strongly expanding mandrel — 1.34 mm wall will distort",
+        "target_mm": "O7.990 +/- 0.005",
+        "benefits": ["Uniform wall thickness", "Good ID-to-OD concentricity", "Good OD roundness", "Better locating accuracy in assembly"]
+      },
+      "step_3": {
+        "operation": "Final hone ID",
+        "target_mm": "O5.310 +/- 0.005",
+        "purpose": "Corrects any small bore deformation caused by mandrel pressure during OD grinding",
+        "final_acceptance_mm": "O5.300-5.320"
+      }
+    },
+    "what_not_to_do": [
+      "Do not finish ID to O5.30-5.32 then aggressively rough-turn OD from O10 to O8 — distorts bore",
+      "Do not heat treat after finishing either ID or OD — heat treatment changes both dimensions",
+      "Do not use heavy expanding mandrel for OD grinding — 1.34 mm wall deforms under expansion pressure"
+    ],
+    "recommended_flow": "Face -> Drill ID -> Rough bore ID -> Rough-turn OD in same setup -> Part off and face -> Heat treatment -> Semi-finish ID -> Finish-grind OD using ID as datum -> Final-hone ID -> Chamfer and inspect"
+  },
+
+  "process_sequence": [
+    {
+      "op": 10,
+      "name": "Incoming material inspection",
+      "equipment": ["Material analyser (if required)", "Vernier / micrometer", "Hardness tester", "Visual inspection bench"],
+      "checks": [
+        "EN31 material certificate — verify heat number",
+        "Bar diameter O10 mm",
+        "Annealed / machinable condition",
+        "Surface defects — seams, cracks, pitting",
+        "Heat number recorded for traceability",
+        "Do not mix EN31 batches of different heat-treatment history"
+      ]
+    },
+    {
+      "op": 20,
+      "name": "Blank preparation (optional when bar-fed CNC used)",
+      "machine": "CNC bandsaw or circular saw",
+      "cut_size": "O10 x 34.0 +/- 0.5 mm",
+      "actions": [
+        "Cut blank to O10 x 34 mm",
+        "Remove large saw burrs before loading into CNC"
+      ],
+      "note": "This operation can be skipped when machining directly from a bar-fed CNC lathe"
+    },
+    {
+      "op": 30,
+      "name": "CNC turning — first side",
+      "machine": "CNC turn-mill or Swiss CNC with sub-spindle",
+      "workholding": "O10 mm precision collet — not conventional three-jaw chuck",
+      "sequence": [
+        "Face first end",
+        "Spot-drill accurately on spindle centre — critical for equal wall thickness",
+        "Drill through with ~O5.0 mm through-coolant carbide drill (L/D ratio ~6:1)",
+        "Lightly bore ID to correct drill runout",
+        "Rough-turn OD in same clamping without removing part",
+        "Machine first preliminary chamfer ~0.35-0.40 x 45 degrees",
+        "Part off or transfer to sub-spindle"
+      ],
+      "pre_HT_targets": {
+        "OD_mm": "O8.15-8.20",
+        "ID_mm": "O5.10-5.15",
+        "note": "Do not finish ID to O5.30 before hardening"
+      },
+      "cutting_parameters_annealed_EN31": {
+        "OD_rough_turning":  { "speed_m_per_min": "120-160", "feed_mm_per_rev": "0.08-0.15", "depth_of_cut_mm": "0.3-0.8" },
+        "OD_finish_turning": { "speed_m_per_min": "150-200", "feed_mm_per_rev": "0.03-0.08", "depth_of_cut_mm": "0.1-0.2" },
+        "drilling_O5mm": {
+          "speed_m_per_min": "50-80",
+          "approx_rpm": "3200-5000",
+          "feed_mm_per_rev": "0.04-0.08",
+          "coolant": "Through-tool preferred",
+          "pecking": "Only when chip evacuation requires it"
+        },
+        "spindle_speed_note": "For O10 mm OD stock, typical OD turning rpm ~3800-5000 subject to machine limits"
+      }
+    },
+    {
+      "op": 40,
+      "name": "CNC turning — second side",
+      "machine": "Sub-spindle or bored soft collet",
+      "workholding": "Full-contact collet — low clamping pressure (~1.5 mm wall at this stage)",
+      "sequence": [
+        "Face second end",
+        "Establish pre-HT length 30.30-30.40 mm",
+        "Machine second preliminary chamfer ~0.35-0.40 x 45 degrees",
+        "Lightly deburr ID edge",
+        "Do not add large internal chamfer unless shown on drawing"
+      ]
+    },
+    {
+      "op": 50,
+      "name": "Pre-heat-treatment inspection",
+      "type": "HOLD POINT",
+      "checks": [
+        "OD: O8.15-8.20 mm",
+        "ID: O5.10-5.15 mm",
+        "Length: 30.30-30.40 mm",
+        "Complete burr removal — no loose material in bore",
+        "No deep tool marks",
+        "No eccentric drilling — measure wall variation",
+        "No cracks at part-off face",
+        "Bore-to-OD runout <= 0.05 mm recommended — reduces final grinding problems",
+        "Wash parts thoroughly — oil and coolant residue must not enter furnace"
+      ]
+    },
+    {
+      "op": 60,
+      "name": "Heat treatment",
+      "specification": "Through harden and temper EN31 to 58-62 HRC (subject to design approval)",
+      "typical_process": {
+        "method": "Vacuum heat treatment preferred — avoids scale and decarburization",
+        "austenitising_temp_C": "830-850 (confirm with heat-treatment department and material certificate)",
+        "quenching": "Controlled gas or oil quench",
+        "tempering": "Low-temperature temper to achieve target hardness"
+      },
+      "precautions": [
+        "Fixture parts vertically where possible",
+        "Do not pack thin sleeves tightly together",
+        "Use vacuum or protective atmosphere — no scale or decarburization",
+        "Pre-machined chamfers reduce quench-crack risk",
+        "Process one hardness test coupon with the batch",
+        "Record batch number and furnace chart"
+      ],
+      "post_HT_inspection": [
+        "Hardness — Rockwell HRC at coupon",
+        "Crack inspection — visual and magnetic particle if load-critical",
+        "Ovality and bore distortion",
+        "Straightness",
+        "Scale and decarburization",
+        "Remaining grinding stock"
+      ],
+      "note": "Exact temperature, soaking time and quenching method must be established by heat-treatment department based on material certificate, furnace load, section thickness, required hardness and distortion trials"
+    },
+    {
+      "op": 70,
+      "name": "Face grinding",
+      "machine": "CNC surface grinder with fixture, or double-disc grinder",
+      "target_mm": "30.00 +/- 0.05 mm",
+      "drawing_range_mm": [29.80, 30.20],
+      "actions": [
+        "Grind both faces to length 30.00 +/- 0.05 mm",
+        "Ensure faces are square to part axis"
+      ]
+    },
+    {
+      "op": 80,
+      "name": "Internal grinding and honing",
+      "machine": "CNC internal grinder then precision honing machine",
+      "sequence": [
+        "Internal-grind bore to ~O5.305-5.308 mm",
+        "Hone to O5.310 mm production target",
+        "Check bore taper over full 30 mm length — GO gauge must pass full length",
+        "Confirm roundness"
+      ],
+      "production_target_mm": "O5.310 +/- 0.005",
+      "production_range_mm": [5.305, 5.315],
+      "drawing_range_mm": [5.300, 5.320],
+      "geometric_controls": {
+        "taper_mm": "<= 0.005",
+        "roundness_mm": "<= 0.005",
+        "surface_finish": "Ra <= 0.8 um"
+      },
+      "note": "Finish bore first — it becomes the datum reference for OD grinding"
+    },
+    {
+      "op": 90,
+      "name": "OD cylindrical grinding",
+      "machine": "CNC cylindrical grinder with CBN wheel suitable for hardened EN31",
+      "workholding": {
+        "type": "Precision low-force mandrel referenced from finished bore",
+        "mandrel_size_mm": "O5.302-5.306 (close fit, not interference — wall is only ~1.34 mm)",
+        "warning": "Do not use heavy expanding mandrel — risk of bore distortion and wall deformation"
+      },
+      "sequence": [
+        "Multiple light finishing passes",
+        "Adequate coolant flow",
+        "Two or three spark-out passes",
+        "No blueing or grinding burns",
+        "Inspect at both ends and at centre"
+      ],
+      "production_target_mm": "O7.990 +/- 0.005",
+      "production_range_mm": [7.985, 7.995],
+      "drawing_range_mm": [7.980, 8.000],
+      "geometric_controls": {
+        "roundness_mm": "<= 0.005",
+        "cylindricity_mm": "<= 0.01",
+        "OD_to_ID_runout_mm": "<= 0.02"
+      }
+    },
+    {
+      "op": 100,
+      "name": "Final honing of ID",
+      "machine": "Precision honing machine",
+      "action": "Lightly hone bore to O5.310 +/- 0.005 mm — corrects any small bore deformation from mandrel during OD grinding",
+      "final_ID_range_mm": [5.300, 5.320]
+    },
+    {
+      "op": 110,
+      "name": "Final chamfering",
+      "requirement": "2x 0.5 x 45 degrees external chamfers, both ends",
+      "machine_options": [
+        "CNC cylindrical grinder with profile wheel",
+        "CNC tool grinder",
+        "Hard-turning CNC lathe with CBN insert"
+      ],
+      "notes": [
+        "Part is hardened — standard carbide wears rapidly. Prefer CBN tooling or grinding.",
+        "Only lightly deburr internal bore edges — do not create unapproved large internal chamfer"
+      ]
+    },
+    {
+      "op": 120,
+      "name": "Deburring, cleaning and preservation",
+      "actions": [
+        "Fine removal of grinding burrs",
+        "Ultrasonic or aqueous cleaning",
+        "Compressed-air cleaning of bore",
+        "Complete drying",
+        "Light rust-preventive oil application"
+      ],
+      "caution": "Do not use aggressive polishing that could reduce OD below O7.98 mm"
+    },
+    {
+      "op": 130,
+      "name": "Final inspection — 100% all features",
+      "note": "Measure all features after parts stabilise at 20 deg C — thermal expansion is significant relative to 20 um tolerance band",
+      "inspection_plan": [
+        { "characteristic": "OD",              "requirement_mm": "7.980-8.000",         "equipment": "0.001 mm outside micrometer or air gauge",             "positions": "Near end-1, centre, near end-2; two angular directions at each — detects taper and ovality" },
+        { "characteristic": "ID",              "requirement_mm": "5.300-5.320",         "equipment": "Air gauge or three-point bore micrometer",             "positions": "Both ends and centre; check taper and roundness" },
+        { "characteristic": "Length",          "requirement_mm": "29.80-30.20",         "equipment": "Height gauge or micrometer",                           "note": "Shop production target 30.00 +/- 0.05 mm" },
+        { "characteristic": "Chamfer",         "requirement": "0.5 x 45 deg, 2x ends", "equipment": "Optical comparator or chamfer gauge",                  "positions": "Both ends" },
+        { "characteristic": "Hardness",        "requirement": "58-62 HRC if approved",  "equipment": "Rockwell tester on batch coupon",                      "note": "Test coupon processed with batch" },
+        { "characteristic": "OD roundness",    "requirement_mm": "<= 0.005 recommended","equipment": "Roundness tester",                                    "positions": "Both ends and centre" },
+        { "characteristic": "ID-to-OD runout", "requirement_mm": "<= 0.02 recommended", "equipment": "Precision mandrel and dial indicator",                "positions": "Full length" },
+        { "characteristic": "OD surface finish","requirement": "Ra <= 0.4 um recommended","equipment": "Surface roughness tester",                          "positions": "OD" },
+        { "characteristic": "ID surface finish","requirement": "Ra <= 0.8 um recommended","equipment": "Surface roughness tester",                          "positions": "Bore" },
+        { "characteristic": "Cracks",          "requirement": "None permitted",         "equipment": "Visual; MPI if safety- or load-critical",              "positions": "All surfaces" },
+        { "characteristic": "Wall thickness",  "requirement_mm": ">= 1.33",             "equipment": "Calculated from measured OD and ID — (OD minus ID) / 2","note": "Must be >= 1.33 mm at all measurement positions" }
+      ]
+    }
+  ],
+
+  "tooling_list": {
+    "CNC_turning_stage": [
+      { "tool": "Coated-carbide OD turning tool",     "purpose": "Facing and external turning" },
+      { "tool": "90 or 120 degree spot drill",        "purpose": "Accurate drill location on spindle centre" },
+      { "tool": "O5.0 through-coolant carbide drill", "purpose": "Through-hole drilling — L/D ~6:1" },
+      { "tool": "Small boring bar",                   "purpose": "Bore correction and concentricity after drilling" },
+      { "tool": "45 degree profiling tool",           "purpose": "Preliminary chamfers" },
+      { "tool": "1.5-2.0 mm parting blade",           "purpose": "Cut-off" },
+      { "tool": "Bored soft collet",                  "purpose": "Second-operation workholding" }
+    ],
+    "grinding_stage": [
+      { "tool": "Internal CBN grinding wheel",        "purpose": "ID grinding of hardened bore" },
+      { "tool": "External CBN grinding wheel",        "purpose": "OD grinding of hardened sleeve" },
+      { "tool": "Precision low-force solid arbor",    "purpose": "Workholding for OD grinding — referenced from finished bore" },
+      { "tool": "Honing mandrel ~O5.31 mm",           "purpose": "Final ID honing" },
+      { "tool": "CBN insert (hard turning)",          "purpose": "Final chamfers if hard-turning route selected" }
+    ]
+  },
+
+  "machine_allocation": [
+    { "operation": "Raw material cutting",      "equipment": "CNC bandsaw or circular saw",                                    "in_house": true },
+    { "operation": "CNC turning first side",    "equipment": "CNC turn-mill or Swiss CNC with sub-spindle",                   "in_house": true },
+    { "operation": "CNC turning second side",   "equipment": "Sub-spindle or rechucking in bored soft collet",                "in_house": true },
+    { "operation": "Heat treatment",            "equipment": "Vacuum heat treatment furnace",                                  "in_house": "subcontract if no suitable vacuum furnace" },
+    { "operation": "Face grinding",             "equipment": "CNC surface grinder or double-disc grinder",                    "in_house": true },
+    { "operation": "Internal grinding",         "equipment": "CNC internal grinder",                                          "in_house": true },
+    { "operation": "ID honing",                 "equipment": "Precision honing machine",                                      "in_house": true },
+    { "operation": "OD cylindrical grinding",   "equipment": "CNC cylindrical grinder with CBN wheel",                        "in_house": true },
+    { "operation": "Final chamfering",          "equipment": "CNC grinder with profile wheel or hard-turning with CBN insert", "in_house": true },
+    { "operation": "Final inspection",          "equipment": "Air gauges, bore micrometer, roundness tester, surface tester",  "in_house": true }
+  ],
+
+  "route_summary_hardened": "Incoming inspection -> Saw blank O10x34 mm -> CNC: face, spot-drill, drill ID O5.0, rough-bore ID to O5.10-5.15, rough-turn OD to O8.15-8.20 in same clamping, preliminary chamfer, part-off -> Second-op: face to length 30.30-30.40, second chamfer, deburr -> Pre-HT inspection (HOLD) -> Through-harden to 58-62 HRC in vacuum -> Post-HT inspection -> Face-grind to 30.00+/-0.05 -> Internal-grind + hone ID to O5.310+/-0.005 -> OD cylindrical-grind on precision mandrel to O7.990+/-0.005 -> Final-hone ID to correct mandrel deformation -> Finish chamfers 2x0.5x45 degrees -> Deburr, clean, preserve -> 100% final inspection",
+
+  "route_summary_soft_no_HT": "Incoming inspection -> Saw blank O10x34 mm -> CNC: face, spot-drill, drill O5.0, bore ID to ~O5.30-5.31 by precision boring or reaming -> Turn OD to ~O8.01 -> Part-off and reverse -> Face to 30.00 mm -> Both 0.5x45 degree chamfers -> Cylindrical-grind OD to O7.990+/-0.005 mm -> Deburr, clean, inspect. Note: Does not provide wear resistance expected from EN31 dowel. Recommended only if designer confirms no hardening required.",
+
+  "recommended_final_specification": {
+    "material": "EN31",
+    "condition": "Through hardened and tempered 58-62 HRC",
+    "OD": "O7.980-8.000 mm ground, Ra <= 0.4 um",
+    "ID": "O5.300-5.320 mm ground/honed, Ra <= 0.8 um",
+    "length": "30.0 mm (drawing general tolerance +/- 0.2 mm; production target 30.00 +/- 0.05 mm)",
+    "chamfer": "2x 0.5 x 45 degrees",
+    "runout": "ID total runout <= 0.02 mm relative to OD axis (datum A)",
+    "quantity": 4
+  }
+}

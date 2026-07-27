@@ -1,0 +1,473 @@
+{
+  "part": {
+    "drawing_number": "VI-SR5-25-72-25-01-R0",
+    "assembly_drawing": "VI-SR5-25-72-25-R0",
+    "description": "top_plate",
+    "material": "C45",
+    "quantity": 1,
+    "weight_kg": 4.74,
+    "drawn_by": "Gegyasa",
+    "date": "02/07/26",
+    "scale": "1:1",
+    "size": "A3",
+    "sheet": "01/01",
+    "revision": "00",
+    "company": "Velankani Information Systems Pvt. Ltd., Bangalore, India",
+    "general_tolerance": "ISO 2768-mK",
+    "tolerance_table": {
+      "one_decimal_mm": "+/- 0.2",
+      "two_decimal_mm": "+/- 0.02",
+      "three_decimal_mm": "+/- 0.005"
+    }
+  },
+
+  "drawing_interpretation": {
+    "overall_size_mm": "220.0 x 120.0 x 25.0",
+    "length_mm":     { "nominal": 220.0, "tolerance": "+/- 0.2", "range_mm": [219.8, 220.2] },
+    "width_mm":      { "nominal": 120.0, "tolerance": "+/- 0.2", "range_mm": [119.8, 120.2] },
+    "thickness_mm":  {
+      "nominal": 25.0,
+      "general_tolerance": "+/- 0.2",
+      "production_target": "25.00 +/- 0.02",
+      "critical_note": "Hold to 25.00 +/- 0.02 mm — opposing D/E counterbores (17.00 mm + 7.00 mm) leave only 1.00 mm wall between them. Thickness must be controlled precisely."
+    },
+    "corner_radii_mm": 5.0,
+    "coordinate_origin": "Plate centre (0, 0)",
+    "hole_table_1_face1": {
+      "note": "All holes in this table are machined from Face 1 (top face in main view). Coordinates are centre-origin (X=0, Y=0 at plate centre).",
+      "AB_compound": {
+        "note": "Tags A1-A4 and B1-B4 refer to the SAME four hole locations. A = compound feature (through + counterbore), B = through portion only. Not 8 separate holes.",
+        "through_dia_mm": 6.40,
+        "counterbore_dia_mm": 10.40,
+        "counterbore_depth_mm": 10.00,
+        "counterbore_bottom": "flat — use flat-bottom end mill, NOT twist drill",
+        "qty": 4,
+        "locations": [
+          { "tag": "A1/B1", "x": -40.00, "y":   0.00 },
+          { "tag": "A2/B2", "x":   0.00, "y": -40.00 },
+          { "tag": "A3/B3", "x":   0.00, "y":  40.00 },
+          { "tag": "A4/B4", "x":  40.00, "y":   0.00 }
+        ]
+      },
+      "C_precision": {
+        "note": "Four separate O5 H7 precision through holes. Each is an independent location — not compound with any other tag.",
+        "dia_fit": "5.00 H7",
+        "dia_range_mm": [5.000, 5.010],
+        "qty": 4,
+        "locations": [
+          { "tag": "C1", "x": -36.96, "y":  15.31 },
+          { "tag": "C2", "x": -15.31, "y": -36.96 },
+          { "tag": "C3", "x":  15.31, "y":  36.96 },
+          { "tag": "C4", "x":  36.96, "y": -15.31 }
+        ]
+      },
+      "DE_compound": {
+        "note": "Tags D1-D4 and E1-E4 refer to the SAME four hole locations. D = O5.30 through hole, E = O12.50 counterbore 17.00 mm deep from Face 1. Not 8 separate holes.",
+        "through_dia_mm": 5.30,
+        "counterbore_dia_mm": 12.50,
+        "counterbore_depth_face1_mm": 17.00,
+        "counterbore_bottom": "flat — use flat-bottom end mill, NOT twist drill",
+        "reverse_counterbore_face2": {
+          "dia_mm": 12.50,
+          "depth_mm": 7.00,
+          "depth_formula": "actual_plate_thickness - 17.00 - 1.00",
+          "note": "Implied by Section B-B. SUBJECT TO DESIGN CONFIRMATION before machining. Depth must be calculated from measured plate thickness, not a fixed program value.",
+          "wall_remaining_mm": 1.00
+        },
+        "qty": 4,
+        "locations": [
+          { "tag": "D1/E1", "x": -35.00, "y": -30.00 },
+          { "tag": "D2/E2", "x": -35.00, "y":  30.00 },
+          { "tag": "D3/E3", "x":  35.00, "y": -30.00 },
+          { "tag": "D4/E4", "x":  35.00, "y":  30.00 }
+        ]
+      }
+    },
+    "hole_table_2_face2": {
+      "note": "Section C-C — large blind bores machined from Face 2 only. Face 2 is the face opposite to Face 1 (large-bore side).",
+      "A_large_bore": {
+        "dia_fit": "32.00 H7",
+        "dia_range_mm": [32.000, 32.030],
+        "depth_mm": 10.00,
+        "qty": 4,
+        "locations": [
+          { "tag": "A1", "x": -80.00, "y": -28.00 },
+          { "tag": "A2", "x": -80.00, "y":  28.00 },
+          { "tag": "A3", "x":  80.00, "y": -28.00 },
+          { "tag": "A4", "x":  80.00, "y":  28.00 }
+        ]
+      }
+    },
+    "section_BB_interpretation": {
+      "description": "Section B-B shows the D/E compound hole in cross-section through the 25 mm plate thickness.",
+      "face1_counterbore_depth_mm": 17.00,
+      "face2_counterbore_depth_mm": 7.00,
+      "wall_between_counterbores_mm": 1.00,
+      "calculation": "25.00 - 17.00 - 7.00 = 1.00 mm",
+      "warning": "Only 1.00 mm wall remains. Plate thickness must be 25.00 +/- 0.02 mm. Both counterbore depths must be accurate. Confirm with design that 1.00 mm wall is intentional."
+    },
+    "critical_warning": "Do NOT machine 8 separate A-holes and 8 separate B-holes. A and B in Hole Table 1 are two diameters at the same 4 locations. Same applies to D and E. The A1-A4 in Hole Table 2 (Face 2 large bores) are separate from A1-A4 in Hole Table 1. Confirm all compound-hole interpretations with design before issuing operation sheet."
+  },
+
+  "dro_coordinates": {
+    "note": "Plate is 220 x 120 mm. Datum origin set at finished lower-left corner for VMC and DRO work. Centre = X110.00, Y60.00 from lower-left corner. All coordinates below are from lower-left corner datum.",
+    "centre_from_lower_left": { "x": 110.00, "y": 60.00 },
+    "AB_compound_holes_face1": [
+      { "tag": "A1/B1", "dro_x":  70.00, "dro_y": 60.00 },
+      { "tag": "A2/B2", "dro_x": 110.00, "dro_y": 20.00 },
+      { "tag": "A3/B3", "dro_x": 110.00, "dro_y": 100.00 },
+      { "tag": "A4/B4", "dro_x": 150.00, "dro_y": 60.00 }
+    ],
+    "C_precision_holes_face1": [
+      { "tag": "C1", "dro_x":  73.04, "dro_y":  75.31 },
+      { "tag": "C2", "dro_x":  94.69, "dro_y":  23.04 },
+      { "tag": "C3", "dro_x": 125.31, "dro_y":  96.96 },
+      { "tag": "C4", "dro_x": 146.96, "dro_y":  44.69 }
+    ],
+    "DE_compound_holes_face1": [
+      { "tag": "D1/E1", "dro_x":  75.00, "dro_y": 30.00 },
+      { "tag": "D2/E2", "dro_x":  75.00, "dro_y": 90.00 },
+      { "tag": "D3/E3", "dro_x": 145.00, "dro_y": 30.00 },
+      { "tag": "D4/E4", "dro_x": 145.00, "dro_y": 90.00 }
+    ],
+    "large_bores_face2": [
+      { "tag": "A1 (Face2)", "dro_x":  30.00, "dro_y": 32.00 },
+      { "tag": "A2 (Face2)", "dro_x":  30.00, "dro_y": 88.00 },
+      { "tag": "A3 (Face2)", "dro_x": 190.00, "dro_y": 32.00 },
+      { "tag": "A4 (Face2)", "dro_x": 190.00, "dro_y": 88.00 }
+    ],
+    "datum_note": "X0 = 110.00 mm from short edge (220 mm direction). Y0 = 60.00 mm from long edge (120 mm direction). Set Z0 on active face for each VMC setup. Do NOT transfer datum between Setup 1 and Setup 2 — re-establish independently from finished edges."
+  },
+
+  "dimensions": {
+    "overall_length_mm":   { "nominal": 220.0,  "tolerance": "+/- 0.2",  "range_mm": [219.8, 220.2],  "production_target_mm": "220.00-220.05" },
+    "overall_width_mm":    { "nominal": 120.0,  "tolerance": "+/- 0.2",  "range_mm": [119.8, 120.2],  "production_target_mm": "120.00-120.05" },
+    "thickness_mm":        { "nominal": 25.0,   "tolerance": "+/- 0.2 general but hold +/- 0.02 critical", "range_mm": [24.98, 25.02], "production_target_mm": "25.00 +/- 0.02", "critical": true, "reason": "Opposing D/E counterbores leave only 1.00 mm wall — must hold 25.00 +/- 0.02" },
+    "corner_radius_mm":    { "nominal": 5.0,    "tolerance": "+/- 0.2",  "note": "4 corners, all R5.0 mm" },
+    "through_dia_AB_mm":   { "nominal": 6.40,   "tolerance": "+/- 0.02", "range_mm": [6.38, 6.42],   "qty": 4 },
+    "counterbore_AB_dia_mm": { "nominal": 10.40, "tolerance": "+/- 0.02", "range_mm": [10.38, 10.42], "qty": 4 },
+    "counterbore_AB_depth_mm": { "nominal": 10.00, "tolerance": "+/- 0.02", "range_mm": [9.98, 10.02], "qty": 4 },
+    "C_holes_dia_mm":      { "fit": "5.00 H7",  "range_mm": [5.000, 5.010], "production_target_mm": "5.004-5.008", "qty": 4 },
+    "through_dia_DE_mm":   { "nominal": 5.30,   "tolerance": "+/- 0.02", "range_mm": [5.28, 5.32],   "qty": 4 },
+    "counterbore_DE_dia_mm": { "nominal": 12.50, "tolerance": "+/- 0.02", "range_mm": [12.48, 12.52], "qty": 4 },
+    "counterbore_DE_depth_face1_mm": { "nominal": 17.00, "tolerance": "+/- 0.02", "range_mm": [16.98, 17.02], "critical": true, "reason": "Contributes to 1 mm wall calculation", "qty": 4 },
+    "reverse_counterbore_DE_depth_face2_mm": { "nominal": 7.00, "formula": "actual_thickness - 17.00 - 1.00", "note": "Not a fixed value — calculate from measured plate thickness. SUBJECT TO DESIGN CONFIRMATION.", "qty": 4 },
+    "large_bore_dia_mm":   { "fit": "32.00 H7", "range_mm": [32.000, 32.030], "production_target_mm": "32.010-32.020", "qty": 4 },
+    "large_bore_depth_mm": { "nominal": 10.00,  "tolerance": "+/- 0.02", "range_mm": [9.98, 10.02],  "qty": 4 },
+    "wall_between_DE_counterbores_mm": { "nominal": 1.00, "formula": "plate_thickness - face1_CB_depth - face2_CB_depth", "note": "Minimum acceptable wall — confirm with design that this is intentional and not a drawing error" }
+  },
+
+  "drawing_clarifications": [
+    {
+      "item": 1,
+      "topic": "A/B compound-hole tags in Hole Table 1",
+      "description": "Tags A1-A4 and B1-B4 in Hole Table 1 share identical X/Y coordinates. These represent a compound feature — O6.40 through + O10.40 counterbore 10.00 mm deep — at each of four locations, not 8 separate holes. Note: A1-A4 in Hole Table 2 (Face 2, large bores) are entirely different features at different coordinates. Confirm compound interpretation before issuing operation sheet."
+    },
+    {
+      "item": 2,
+      "topic": "D/E compound-hole tags in Hole Table 1",
+      "description": "Tags D1-D4 and E1-E4 share identical X/Y coordinates. These represent a compound feature — O5.30 through + O12.50 counterbore 17.00 mm deep — at each of four locations, not 8 separate holes. Confirm with design before issuing operation sheet."
+    },
+    {
+      "item": 3,
+      "topic": "Reverse O12.50 counterbore from Face 2 (Section B-B)",
+      "description": "Hole Table 1 only lists the 17.00 mm deep counterbore from Face 1. Section B-B implies an opposite-face O12.50 counterbore approximately 7.00 mm deep, but this is not independently dimensioned or explicitly called out in the hole table. CONFIRM with design: (a) does the reverse counterbore exist, (b) is O12.50 the correct diameter for the reverse bore, and (c) what is the required depth formula. Do NOT machine the reverse counterbore until confirmed."
+    },
+    {
+      "item": 4,
+      "topic": "1 mm wall criticality between opposing D/E counterbores",
+      "description": "With plate thickness 25.00 mm, Face 1 D/E counterbore 17.00 mm deep, and Face 2 reverse counterbore 7.00 mm deep, only 1.00 mm of material remains as a wall. This is extremely thin. Plate thickness must be held to 25.00 +/- 0.02 mm and both counterbore depths must be accurate. Confirm this wall is intentional in the design and not a drawing error before proceeding."
+    },
+    {
+      "item": 5,
+      "topic": "Surface finish not specified",
+      "description": "No Ra or surface texture symbol appears on the drawing. Recommended shop standards: ground faces Ra 0.8-1.6 um, milled faces Ra 1.6-3.2 um, bored and reamed holes Ra 1.6 um. Add explicit callout to drawing if the part is used in a precision assembly."
+    },
+    {
+      "item": 6,
+      "topic": "No heat treatment specified",
+      "description": "C45 is a hardenable medium-carbon steel, but no hardness requirement or heat-treatment callout appears on the drawing. Manufacture and supply in normalized condition unless design issues a revised requirement with an explicit hardness specification."
+    }
+  ],
+
+  "raw_material": {
+    "grade": "C45",
+    "condition": "Normalized",
+    "blank_size_mm": "224 x 124 x 27-28",
+    "rationale": "Extra 2 mm per face in length and width allows for squaring. Extra 2-3 mm in thickness covers rough facing on both sides plus grinding allowance (0.15-0.20 mm per face).",
+    "requirements": [
+      "C45 material certificate — verify grade and batch number before starting",
+      "Normalized condition — no hardening unless design specifies",
+      "Check flatness before machining — do not load bowed plate onto milling machine",
+      "No visible cracks, rust, seams or heavy scale",
+      "Record material batch number for traceability"
+    ]
+  },
+
+  "manufacturing_philosophy": {
+    "summary": "Manual machines for blank preparation, six-side squaring, R5 corner machining, and surface grinding. VMC for all coordinate-controlled holes and counterbores.",
+    "datum_discipline": "Do NOT split hole machining between a DRO drilling machine and VMC — datum transfer error will accumulate. All A/B/C/D/E holes must come from the same VMC setup on the same datum.",
+    "vmc_setup_1": {
+      "face": "Face 1 upward",
+      "operations": [
+        "All 4x O6.40 through holes",
+        "All 4x O10.40 counterbores 10.00 mm deep",
+        "All 4x O5.00 H7 through holes",
+        "All 4x O5.30 through holes",
+        "All 4x O12.50 counterbores 17.00 mm deep from Face 1"
+      ]
+    },
+    "vmc_setup_2": {
+      "face": "Face 2 upward",
+      "operations": [
+        "All 4x O32.00 H7 blind bores 10.00 mm deep",
+        "All 4x O12.50 reverse counterbores approximately 7.00 mm deep (SUBJECT TO DESIGN CONFIRMATION)"
+      ]
+    },
+    "manual_operations": [
+      "Band-saw cutting to blank",
+      "Rough face milling — both sides alternately",
+      "Finish outside to 220 x 120 mm",
+      "Machine four R5 corners",
+      "Surface grinding to 25.00 +/- 0.02 mm"
+    ]
+  },
+
+  "process_sequence": [
+    {
+      "op": 10,
+      "name": "Incoming inspection",
+      "actions": [
+        "Verify C45 material certificate — check grade, condition and batch number",
+        "Check blank dimensions against order",
+        "Confirm normalized condition",
+        "Inspect for visible cracks, seams, rust or heavy scale",
+        "Check flatness — reject bowed or twisted plate",
+        "Record material batch for traceability"
+      ]
+    },
+    {
+      "op": 20,
+      "name": "Band-saw cutting",
+      "machine": "VISPL-TLR-006 Lexon band saw",
+      "blank_size_mm": "224 x 124 x 27-28",
+      "actions": [
+        "Cut C45 normalized plate to 224 x 124 x 27-28 mm blank",
+        "Remove heavy scale from saw-cut edges",
+        "Check for visible bow or twist before proceeding to milling"
+      ]
+    },
+    {
+      "op": 30,
+      "name": "Rough face milling",
+      "machine": "VISPL-TLR-003 Manford vertical precision milling machine",
+      "sequence": [
+        "Face-mill first surface — remove scale, rough down",
+        "Flip and face opposite surface",
+        "Alternate faces — remove equal material from both sides to reduce bowing",
+        "Rough thickness to approximately 25.30-25.40 mm",
+        "Rough long sides to approximately 220.3 mm",
+        "Rough short sides to approximately 120.3 mm",
+        "Leave 0.15-0.20 mm grinding allowance per face",
+        "Leave 0.10-0.20 mm on side edges for finish milling"
+      ],
+      "caution": "Do not remove all material from one face — plate will bow. Check for bow after roughing before proceeding."
+    },
+    {
+      "op": 40,
+      "name": "Finish outside dimensions and R5 corners",
+      "machine": "VISPL-TLR-003 Manford vertical precision milling machine",
+      "sequence": [
+        "Finish two long edges to 120.0 mm width",
+        "Finish two short edges to 220.0 mm length",
+        "Machine four R5 corner radii",
+        "Verify squareness — all four sides square within 0.03 mm"
+      ],
+      "targets_mm": {
+        "length": "220.00-220.05",
+        "width":  "120.00-120.05",
+        "squareness": "within 0.03 mm"
+      },
+      "note": "Finished outside edges become the VMC datum for all subsequent hole-machining operations. These surfaces must be clean, burr-free, and square."
+    },
+    {
+      "op": 50,
+      "name": "Surface grinding",
+      "machine": "VISPL-TLR-015 Perfect surface grinder 550x300",
+      "sequence": [
+        "Grind first face lightly",
+        "Flip and grind opposite face",
+        "Alternate sides — do not finish one face completely before touching the other",
+        "Moderate magnetic chuck force — avoid over-magnetising thin plate",
+        "Finish thickness to 25.00 +/- 0.02 mm",
+        "Check thickness at four corners and centre",
+        "Check flatness and parallelism with dial indicator",
+        "Demagnetise after grinding",
+        "Clean plate thoroughly before VMC",
+        "Mark Face 1 (main view / upper face) and Face 2 (large-bore face) clearly"
+      ],
+      "production_target_mm": "25.00 +/- 0.02",
+      "inspection_points": ["Corner 1", "Corner 2", "Corner 3", "Corner 4", "Centre"],
+      "critical_note": "Thickness must be 25.00 +/- 0.02 mm BEFORE any counterbore depths are machined. All counterbore depths are measured from the finished ground face. If thickness is outside range, the 1.00 mm wall between opposing D/E counterbores cannot be guaranteed."
+    },
+    {
+      "op": 60,
+      "name": "VMC Setup 1 — Face 1 upward, all Face 1 holes and counterbores",
+      "machine_primary": "VISPL-TLR-008 Makino VMC",
+      "machine_alternative": "VISPL-TLR-021 ACE MCV-700 Plus",
+      "setup": [
+        "Place ground plate on parallels with sacrificial backing plate below through-hole locations",
+        "Use strap clamps outside the part envelope — do NOT clamp over any hole location",
+        "Indicate ground Face 1 surface — flatness check before machining",
+        "Find plate centre from two pairs of finished edges",
+        "Set X0 = 110.00 mm from short edge (220 mm direction)",
+        "Set Y0 = 60.00 mm from long edge (120 mm direction)",
+        "Set Z0 on Face 1 surface"
+      ],
+      "step_A": {
+        "feature": "4x O6.40 through + O10.40 counterbore 10.00 mm deep (A1/B1 through A4/B4)",
+        "sequence": [
+          "Spot drill all four A/B locations",
+          "Drill O6.20 through (pilot for O6.40)",
+          "Ream or helically interpolate to O6.40 through",
+          "Circular-interpolate O10.40 counterbore using flat-bottom end mill",
+          "Finish counterbore depth to 10.00 mm",
+          "DO NOT use twist drill for counterbore bottom — must be flat"
+        ],
+        "tolerances": { "through_dia_mm": "6.40 +/- 0.02", "cb_dia_mm": "10.40 +/- 0.02", "cb_depth_mm": "10.00 +/- 0.02" }
+      },
+      "step_B": {
+        "feature": "4x O5.00 H7 through holes (C1 through C4)",
+        "sequence": [
+          "Spot drill very lightly at C1-C4 — do not make deep spot on H7 holes",
+          "Drill O4.80-4.85 through with sacrificial backing",
+          "Ream with sharp O5.00 H7 machine reamer in continuous feed with flood coolant",
+          "DO NOT stop or reverse reamer inside hole",
+          "Inspect first hole (target 5.004-5.008 mm) before machining remaining three",
+          "Adjust reamer speed/feed if first result is outside target"
+        ],
+        "tolerances": { "dia_fit": "5.00 H7", "range_mm": [5.000, 5.010], "production_target_mm": "5.004-5.008" },
+        "caution": "DO NOT enlarge H7 entry with hand countersink. Light entry chamfer from program only."
+      },
+      "step_C": {
+        "feature": "4x O5.30 through + O12.50 counterbore 17.00 mm deep (D1/E1 through D4/E4)",
+        "sequence": [
+          "Spot drill all four D/E locations",
+          "Drill O5.10 through with sacrificial backing",
+          "Finish O5.30 through by reaming or helical interpolation",
+          "Helically interpolate O12.50 counterbore in axial steps to depth 17.00 mm",
+          "Finish to 17.00 mm depth with flat-bottom end mill",
+          "DO NOT use twist drill for counterbore bottom — must be flat",
+          "Check depth with depth micrometer — this is critical for 1.00 mm wall"
+        ],
+        "tolerances": { "through_dia_mm": "5.30 +/- 0.02", "cb_dia_mm": "12.50 +/- 0.02", "cb_depth_mm": "17.00 +/- 0.02" },
+        "critical_note": "17.00 mm counterbore depth is critical. If depth is more than 17.02 mm, the remaining wall will be less than 1.00 mm after Face 2 counterbore is machined."
+      }
+    },
+    {
+      "op": 70,
+      "name": "VMC Setup 2 — Face 2 upward, large bores and reverse counterbores",
+      "machine_primary": "VISPL-TLR-008 Makino VMC",
+      "machine_alternative": "VISPL-TLR-021 ACE MCV-700 Plus",
+      "setup": [
+        "Flip plate — Face 2 now upward",
+        "Re-establish X0/Y0 independently from finished edges (same formula: X0=110 from short edge, Y0=60 from long edge)",
+        "DO NOT transfer datum from Setup 1 — re-pick from finished edges",
+        "Set Z0 on Face 2 surface",
+        "Verify setup with dial indicator before cutting"
+      ],
+      "step_A": {
+        "feature": "4x O32.00 H7 blind bores 10.00 mm deep (A1 through A4, Hole Table 2)",
+        "sequence": [
+          "Spot drill at all four large-bore locations",
+          "Helically rough bore to O31.70-31.80 mm",
+          "Rough depth to approximately 9.80 mm",
+          "Finish bottom to 10.00 mm depth",
+          "Finish diameter with fine boring head — target 32.010-32.020 mm",
+          "Measure first bore before adjusting boring head offset for remaining three",
+          "DO NOT rely on circular interpolation alone for H7 without proven accuracy on this machine"
+        ],
+        "tolerances": { "dia_fit": "32.00 H7", "range_mm": [32.000, 32.030], "production_target_mm": "32.010-32.020", "depth_mm": "10.00 +/- 0.02" },
+        "caution": "Use fine boring head for diameter control. Verify first bore fully before committing remaining three."
+      },
+      "step_B": {
+        "feature": "4x O12.50 reverse counterbores from Face 2 — SUBJECT TO DESIGN CONFIRMATION",
+        "status": "DO NOT MACHINE until design confirms existence, diameter, and intent",
+        "depth_formula": "actual_measured_plate_thickness - 17.00 - 1.00",
+        "example_at_nominal": "25.00 - 17.00 - 1.00 = 7.00 mm",
+        "sequence": [
+          "Confirm with design before starting this step",
+          "Measure actual plate thickness at each D/E location using depth micrometer",
+          "Calculate required depth: measured_thickness - 17.00 - 1.00",
+          "Enter calculated depth as program value — do NOT use fixed 7.00 mm",
+          "Helically interpolate O12.50 to calculated depth with flat-bottom end mill",
+          "Verify remaining wall by calculation: thickness - Face1_CB_depth - Face2_CB_depth = 1.00 mm"
+        ],
+        "critical_note": "Depth must be calculated from measured plate thickness at each location, not from a fixed value. Variation in thickness must be accounted for."
+      }
+    },
+    {
+      "op": 80,
+      "name": "Deburring and edge finishing",
+      "actions": [
+        "Break all external edges 0.2-0.3 mm with fine ceramic stone or deburring blade",
+        "Remove through-hole exit burrs from both faces",
+        "Light entry-edge break on O5 H7 and O32 H7 features from program only — do NOT enlarge with hand countersink",
+        "Clean all holes thoroughly — remove all chips and metal particles",
+        "Apply rust-preventive oil to all surfaces"
+      ],
+      "caution": "Do not use hand countersink tool on any H7 hole. Even a small over-chamfer removes the lead portion of the H7 bore and can allow gauge to falsely pass."
+    },
+    {
+      "op": 90,
+      "name": "Final inspection — 100%",
+      "note": "Inspect after parts reach ambient temperature. Inspect all features on every piece.",
+      "inspection_plan": [
+        { "characteristic": "Overall length 220 mm",      "requirement_mm": "219.8-220.2 (general +/- 0.2)", "equipment": "Vernier caliper or outside micrometer" },
+        { "characteristic": "Overall width 120 mm",       "requirement_mm": "119.8-120.2 (general +/- 0.2)", "equipment": "Vernier caliper or outside micrometer" },
+        { "characteristic": "Thickness 25 mm",            "requirement_mm": "24.98-25.02 (+/- 0.02 critical)", "equipment": "Outside micrometer at four corners and centre" },
+        { "characteristic": "Flatness and parallelism",   "requirement": "ISO 2768-mK",                    "equipment": "Surface plate and dial test indicator" },
+        { "characteristic": "R5 corner radii",            "requirement_mm": "5.0 +/- 0.2",                 "equipment": "Radius gauge or profile inspection" },
+        { "characteristic": "O6.40 through holes x4",     "requirement_mm": "6.38-6.42",                   "equipment": "Calibrated plug gauge or bore gauge — all 4 holes" },
+        { "characteristic": "O10.40 counterbore dia x4",  "requirement_mm": "10.38-10.42",                 "equipment": "Bore gauge or suitable plug gauge" },
+        { "characteristic": "O10.40 CB depth x4",         "requirement_mm": "9.98-10.02 mm",               "equipment": "Depth micrometer" },
+        { "characteristic": "O5.00 H7 through holes x4",  "requirement_mm": "5.000-5.010",                 "equipment": "5.000 GO and 5.010 NO-GO plug gauges — check all 4 holes for taper and bell-mouth" },
+        { "characteristic": "O5.30 through holes x4",     "requirement_mm": "5.28-5.32",                   "equipment": "Plug gauge or bore gauge" },
+        { "characteristic": "O12.50 CB dia x4 (Face 1)",  "requirement_mm": "12.48-12.52",                 "equipment": "Bore gauge or plug gauge" },
+        { "characteristic": "O12.50 CB depth 17 mm x4",   "requirement_mm": "16.98-17.02 mm (critical)",   "equipment": "Depth micrometer" },
+        { "characteristic": "O32.00 H7 blind bores x4",   "requirement_mm": "32.000-32.030",               "equipment": "Three-point bore micrometer or dial bore gauge" },
+        { "characteristic": "O32 bore depth 10 mm x4",    "requirement_mm": "9.98-10.02 mm",               "equipment": "Depth micrometer" },
+        { "characteristic": "O12.50 reverse CB depth x4", "requirement_mm": "calculated: thickness-17.00-1.00", "equipment": "Depth micrometer — verify 1.00 mm wall by calculation" },
+        { "characteristic": "Hole coordinates",           "requirement_mm": "+/- 0.02 (two-decimal general)", "equipment": "CMM preferred; height gauge + gauge pins on granite if no CMM available" },
+        { "characteristic": "1 mm wall check",            "requirement_mm": "minimum 1.00 mm",              "equipment": "Calculate from measured plate thickness and both D/E CB depths" },
+        { "characteristic": "Burrs and cleanliness",      "requirement": "None permitted",                  "equipment": "Visual and fingertip inspection of all holes and faces" }
+      ]
+    }
+  ],
+
+  "machine_allocation": [
+    { "operation": "Raw material cutting",                              "equipment": "VISPL-TLR-006 Lexon band saw",                                          "in_house": true },
+    { "operation": "Rough face milling + outside dimensions + R5 corners", "equipment": "VISPL-TLR-003 Manford vertical precision milling machine",             "in_house": true },
+    { "operation": "Surface grinding to 25.00 +/- 0.02 mm",            "equipment": "VISPL-TLR-015 Perfect surface grinder 550x300",                         "in_house": true },
+    { "operation": "VMC Setup 1 — all Face 1 holes and counterbores",  "equipment": "VISPL-TLR-008 Makino VMC (primary) / VISPL-TLR-021 ACE MCV-700 Plus (alternative)", "in_house": true },
+    { "operation": "VMC Setup 2 — O32 H7 bores + reverse CBs",        "equipment": "VISPL-TLR-008 Makino VMC (primary) / VISPL-TLR-021 ACE MCV-700 Plus (alternative)", "in_house": true },
+    { "operation": "Deburring",                                         "equipment": "Manual bench",                                                          "in_house": true },
+    { "operation": "Final inspection",                                  "equipment": "Plug gauges, three-point bore micrometer, depth micrometer, outside micrometer, surface plate, dial indicator, radius gauge, CMM if available", "in_house": true }
+  ],
+
+  "critical_precautions": [
+    "Control plate thickness to 25.00 +/- 0.02 mm — only 1.00 mm wall remains between opposing D/E counterbores (17.00 mm Face 1 + 7.00 mm Face 2)",
+    "Confirm reverse O12.50 counterbore depth formula: actual_measured_thickness - 17.00 - 1.00. Do NOT use fixed 7.00 mm value — calculate per measured plate thickness",
+    "Machine all Face 1 holes (A/B, C, D/E) in a single VMC setup from one datum. Do NOT split between DRO drill and VMC — datum transfer accumulates error",
+    "Machine all Face 2 features (O32 H7 bores + reverse CBs) in a single VMC Setup 2. Re-establish datum from finished edges independently",
+    "DO NOT use twist drill for O10.40 or O12.50 counterbore bottoms — must be flat. Use flat-bottom end mill only",
+    "DO NOT rely on circular interpolation alone for O32 H7 diameter — use fine boring head and verify first bore before machining remaining three",
+    "DO NOT enlarge O5 H7 or O32 H7 entries with hand countersink tool — even a small over-chamfer removes guiding length and can cause false gauge acceptance",
+    "Grind faces to 25.00 +/- 0.02 mm BEFORE machining any counterbore depths — all depths are referenced from the finished ground face",
+    "Confirm A/B and D/E compound-hole interpretation with design before issuing operation sheet",
+    "Confirm reverse O12.50 counterbore existence, correct diameter, and intent with design before machining Face 2",
+    "Confirm 1.00 mm wall between opposing D/E counterbores is intentional and not a drawing error"
+  ],
+
+  "route_summary": "Band-saw C45 blank to 224x124x27-28 mm -> rough face mill both sides alternately -> finish outside to 220.0x120.0 mm + R5 corners on Manford mill, squareness within 0.03 mm -> surface grind to 25.00 +/- 0.02 mm on Perfect grinder, mark Face 1 and Face 2, demagnetise, clean -> VMC Setup 1 Face 1 up (Makino VMC): establish datum from finished edges, spot all locations, 4x O6.40 through + O10.40 CB 10.00 mm deep (flat bottom), 4x O5.00 H7 through (ream, inspect first before remaining three), 4x O5.30 through + O12.50 CB 17.00 mm deep (flat bottom, critical depth) -> VMC Setup 2 Face 2 up (same VMC): re-establish datum from finished edges, 4x O32.00 H7 blind bore 10.00 mm deep (fine boring head, verify first bore), 4x O12.50 reverse CB depth=(thickness-17.00-1.00) mm if confirmed by design -> deburr all edges 0.2-0.3 mm, remove through-hole exit burrs, clean all holes, apply rust-preventive oil -> 100% final inspection: thickness at 5 points, all hole diameters, all CB depths, 1.00 mm wall verification, hole coordinates by CMM or height gauge on granite"
+}

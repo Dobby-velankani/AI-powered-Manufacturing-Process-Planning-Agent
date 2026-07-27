@@ -1,0 +1,439 @@
+{
+  "part": {
+    "article_number": "126164",
+    "drawing_number": "F919.090-HSD5-gehaertet",
+    "description": "Hohlwelle / Hollow shaft",
+    "gearbox_type": "V 090",
+    "material": "42CrMo4",
+    "material_number": "1.7225",
+    "mass_kg": 0.527,
+    "drawing_date": "2026-07-03",
+    "drawn_by": "Michele",
+    "scale": "1.5:1 / 12.5",
+    "sheet": "1 of 1 (DIN A3)",
+    "revision": "00",
+    "status": "Freigegeben (Released)",
+    "company": "ATEK Drive Solutions",
+    "general_tolerance": "ISO 2768-mK",
+    "fit_interpretation": "ISO 14405 with envelope requirement E",
+    "undercuts": "DIN 509 Form F 0.6 x 0.3",
+    "surface_texture_standard": "DIN ISO 1302",
+    "bronze_bush": {
+      "description": "Gleitbuchse aus Bronze / Bronze sliding bush",
+      "designation": "O19/24x18",
+      "article_number": "150177"
+    }
+  },
+
+  "dimensions": {
+    "overall_length_mm":        { "nominal": 149.0, "tolerance": "-0.5",    "range_mm": [148.50, 149.00] },
+    "central_ref_length_mm":    { "nominal": 75.5,  "tolerance": "reference only" },
+    "left_shoulder_mm":         { "nominal": 25.0 },
+    "stepped_section_mm":       { "nominal": 35.5 },
+    "right_shoulder_mm":        { "nominal": 46.5,  "tolerance": "-0.1",   "range_mm": [46.40, 46.50] },
+    "bush_zone_mm":             { "nominal": 27.0 },
+    "keyway_end_section_mm":    { "nominal": 15.0 },
+    "flange_width_mm":          { "nominal": 32.0,  "tolerance": "+0.3",   "range_mm": [32.00, 32.30] }
+  },
+
+  "fits_and_sizes": {
+    "OD_30_k5":    { "nominal": 30.0, "fit": "k5", "min_mm": 30.002, "max_mm": 30.011, "surface": "a - Ra 0.8 um", "note": "Bearing journal - datum features A and B" },
+    "OD_30_e8":    { "nominal": 30.0, "fit": "e8", "min_mm": 29.927, "max_mm": 29.960, "surface": "b - Ra 1.6 um" },
+    "OD_35":       { "nominal": 35.0, "tolerance": "general",                            "surface": "centre body" },
+    "OD_24_h7":    { "nominal": 24.0, "fit": "h7", "min_mm": 23.979, "max_mm": 24.000, "surface": "b - Ra 1.6 um" },
+    "OD_19_plus":  { "nominal": 19.0, "tolerance": "+0.2",           "range_mm": [19.00, 19.20], "note": "Internal central bore" },
+    "OD_18_plus":  { "nominal": 18.0, "tolerance": "+0.2",           "range_mm": [18.00, 18.20], "note": "Internal left bore region" },
+    "ID_18_H6":    { "nominal": 18.0, "fit": "H6", "min_mm": 18.000, "max_mm": 18.011, "note": "Datum C bore - precision internal" },
+    "ID_20_H7":    { "nominal": 20.0, "fit": "H7", "min_mm": 20.000, "max_mm": 20.021, "note": "Finished bronze-bush bore - final after pressing" },
+    "ID_21":       { "nominal": 21.0, "tolerance": "general" },
+    "ID_24_H7":    { "nominal": 24.0, "fit": "H7", "min_mm": 24.000, "max_mm": 24.021, "note": "Bronze bush housing bore in steel" },
+    "bush_OD_24_s6": { "nominal": 24.0, "fit": "s6", "min_mm": 24.035, "max_mm": 24.048, "note": "Bronze bush OD - press fit into shaft" },
+    "bush_interference": {
+      "minimum_mm": 0.014,
+      "maximum_mm": 0.048,
+      "note": "Min: 24.035 - 24.021 = 0.014 mm; Max: 24.048 - 24.000 = 0.048 mm. Controlled press fit required - do not hammer."
+    }
+  },
+
+  "keyway": {
+    "width_P9_mm":        { "nominal": 8.0, "fit": "P9", "min_mm": 7.949, "max_mm": 7.985 },
+    "depth_mm":           { "nominal": 4.0, "tolerance": "+0.2", "range_mm": [4.00, 4.20] },
+    "length_mm":          { "nominal": 32.0, "tolerance": "+0.3", "range_mm": [32.00, 32.30] },
+    "parallelism_mm":     0.03,
+    "parallelism_datum":  "A",
+    "symmetry_mm":        0.1,
+    "symmetry_datum":     "A"
+  },
+
+  "geometrical_tolerances": [
+    { "type": "Circular runout",  "value_mm": 0.01, "datum": "A-B", "applies_to": "Multiple OD features" },
+    { "type": "Circular runout",  "value_mm": 0.02, "datum": "A-B", "applies_to": "Left-hand feature" },
+    { "type": "Coaxiality",       "value_mm": 0.015, "datum": "C",  "applies_to": "Finished O20 H7 bronze-bush bore" },
+    { "type": "Flatness",         "value_mm": 0.1,  "datum": "A",   "applies_to": "B-B section face" },
+    { "type": "Parallelism",      "value_mm": 0.03, "datum": "A",   "applies_to": "Keyway" }
+  ],
+
+  "surface_finish": {
+    "code_a": "Ra 0.8 um - bearing journals O30 k5",
+    "code_b": "Ra 1.6 um - precision diameters",
+    "code_c": "Ra 3.2 um",
+    "code_d": "Ra 6.3 um",
+    "code_e": "Ra 12.5 um"
+  },
+
+  "heat_treatment": {
+    "process_note": "Exact method not stated on drawing - confirm induction, case hardening or nitriding with designer",
+    "condition": "Korrosionsschutzschicht und gehaertet / Corrosion protection and hardened",
+    "hardness_HV_min": 530,
+    "hardness_HV_max": 630,
+    "CHD_after_grinding_min_mm": 0.5,
+    "CHD_after_grinding_max_mm": 1.5,
+    "note": "CHD requirement is AFTER grinding - plan hardening depth accordingly to ensure minimum 0.5 mm remains after all stock removal"
+  },
+
+  "corrosion_protection": {
+    "note": "Coating type not specified on drawing. Clarify: black oxide / phosphate / QPQ / chemical treatment / plating",
+    "clarifications_needed": [
+      "Coating type and thickness",
+      "Masking of O30 k5 bearing journals",
+      "Masking of O24 H7 bush housing bore",
+      "Whether dimensions apply before or after coating"
+    ]
+  },
+
+  "process_sequence": [
+    {
+      "op": 10,
+      "name": "Raw material preparation",
+      "machine": "Lexon band-saw",
+      "blank_diameter_mm": [40, 42],
+      "cut_length_mm": [156, 158],
+      "actions": ["Verify 42CrMo4 / 1.7225 certificate and heat number", "Saw to oversize length", "Mark with heat number"]
+    },
+    {
+      "op": 20,
+      "name": "First CNC turning setup",
+      "machine": "CNC lathe / CNC turning centre",
+      "sequence": [
+        "Face first end",
+        "Centre-drill",
+        "Rough-turn concentric gripping and steady-rest band on OD",
+        "Rough external profile - leave 0.3-0.5 mm on diameter for grinding",
+        "Pilot-drill",
+        "U-drill or gun-drill main internal hole (L/D ~8:1 - use through-coolant insert drill or gun drill)",
+        "Rough-bore internal stepped portions",
+        "Leave internal finishing allowance"
+      ],
+      "key_rule": "U-drill BEFORE OD semi-finishing is completed - removing internal material after OD semi-finish causes distortion and concentricity loss"
+    },
+    {
+      "op": 30,
+      "name": "Second CNC turning setup",
+      "machine": "CNC lathe / CNC turning centre",
+      "sequence": [
+        "Reverse component",
+        "Face second end to establish machining length",
+        "Complete rough OD turning",
+        "Semi-finish all external diameters",
+        "Semi-finish internal stepped bores - O18 H6, O21, O24 H7 regions",
+        "Produce all shoulders, chamfers, radii and DIN 509 F0.6x0.3 undercuts",
+        "Leave external grinding allowance 0.3-0.5 mm on diameter"
+      ]
+    },
+    {
+      "op": 40,
+      "name": "Stress relieving",
+      "machine": "Heat treatment furnace",
+      "note": "Recommended after heavy drilling and roughing, especially if material straightness or residual stress is uncertain. Cool uniformly."
+    },
+    {
+      "op": 50,
+      "name": "Keyway machining",
+      "machine": "CNC VMC or keyway slotting machine",
+      "spec": "8 P9 width, 4+0.2 mm depth, 32+0.3 mm length",
+      "sequence": [
+        "Fixture shaft from semi-finished journal axis",
+        "Rough and finish mill keyway",
+        "Deburr all keyway edges especially at ends",
+        "Verify orientation relative to datum features"
+      ],
+      "key_rule": "Keyway BEFORE pre-CG and BEFORE hardening. Asymmetric material removal from keyway can bend shaft and damage pre-ground surfaces."
+    },
+    {
+      "op": 60,
+      "name": "Pre-heat-treatment QC",
+      "type": "HOLD POINT",
+      "checks": [
+        "Overall length and shoulder positions",
+        "All OD diameters and remaining grinding allowance",
+        "Main bore size and concentricity",
+        "Bore straightness and wall-thickness variation",
+        "Keyway width, depth, length and position",
+        "DIN 509 undercuts present",
+        "Chamfers and radii",
+        "Centre-hole condition",
+        "Initial shaft straightness",
+        "Material certificate and heat number on file",
+        "Sufficient stock for post-heat grinding",
+        "Sufficient hardening depth planned to give CHD 0.5-1.5 mm after grinding"
+      ],
+      "note": "Dimensional errors are expensive to correct after component reaches 530-630 HV. This is a mandatory hold."
+    },
+    {
+      "op": 70,
+      "name": "Optional pre-CG",
+      "condition": "Only when required by approved hardening route",
+      "note": "Do AFTER keyway, not before. Only needed when hardening supplier requires controlled pre-hardening diameter or uniform grinding stock."
+    },
+    {
+      "op": 80,
+      "name": "Hardening",
+      "machine": "Heat treatment furnace or induction hardening equipment",
+      "requirements": {
+        "hardness_HV": [530, 630],
+        "CHD_after_grinding_mm": [0.5, 1.5]
+      },
+      "heat_treatment_instruction_must_define": [
+        "Hardening method (confirm with designer)",
+        "Tempering cycle",
+        "Surfaces to be hardened",
+        "Areas to be masked",
+        "Test location and method",
+        "CHD verification method",
+        "Straightening limitations"
+      ],
+      "note": "Use representative test coupon for case-depth validation"
+    },
+    {
+      "op": 90,
+      "name": "Post-hardening QC",
+      "type": "HOLD POINT",
+      "checks": [
+        "Surface hardness at specified locations",
+        "Case depth from test coupon",
+        "Total shaft bend",
+        "Runout at future O30 k5 journal locations",
+        "Crack test by magnetic particle inspection",
+        "Scale, oxidation and surface damage",
+        "Remaining grinding allowance",
+        "Centre-hole condition",
+        "Keyway distortion and burrs"
+      ],
+      "note": "Straighten before rough grinding if required"
+    },
+    {
+      "op": 100,
+      "name": "Rough cylindrical grinding",
+      "machine": "Cylindrical grinding machine",
+      "strategy": [
+        "Grind both O30 k5 journal regions first - these establish datum A and B",
+        "Rough-grind other controlled ODs",
+        "Leave ~0.04-0.08 mm on diameter for final CG"
+      ],
+      "rough_grind_target_approx_mm": [30.05, 30.08],
+      "note": "Do not remove excessive stock - CHD requirement is 0.5-1.5 mm AFTER all grinding"
+    },
+    {
+      "op": 110,
+      "name": "QC after rough CG",
+      "checks": [
+        "Diameter and remaining stock",
+        "Roundness",
+        "Taper",
+        "Journal-to-journal alignment",
+        "Runout of related diameters relative to A-B",
+        "Available hardened depth",
+        "Straightness"
+      ]
+    },
+    {
+      "op": 120,
+      "name": "Internal finish machining - steel bores",
+      "machine": "ID grinding machine, CBN hard boring, precision honing, or fine boring (depending on bore hardness)",
+      "sequence": [
+        "Finish O18 H6 to 18.000-18.011 mm - this becomes datum C",
+        "Finish O24 H7 bush housing to 24.000-24.021 mm",
+        "Finish O21 and central O19+0.2 as required"
+      ],
+      "hard_bore_note": "If internal bores are hardened (530-630 HV), use CBN hard boring, ID grinding or precision honing. Ordinary carbide boring will wear rapidly and give poor size control.",
+      "soft_bore_note": "If bores are masked/remain soft, precision boring, reaming or fine boring is acceptable."
+    },
+    {
+      "op": 130,
+      "name": "Internal bore QC",
+      "checks": [
+        "O18 H6 size, roundness and taper",
+        "O24 H7 size, roundness and taper",
+        "O21 and O19 sizes",
+        "Datum C bore position",
+        "Surface finish"
+      ]
+    },
+    {
+      "op": 140,
+      "name": "Bronze bush manufacture and QC",
+      "spec": {
+        "OD_s6_mm": [24.035, 24.048],
+        "length_mm": 18.0,
+        "rough_ID_mm": "~19 mm or agreed undersize - leave sufficient stock for final O20 H7 after pressing",
+        "lead_chamfer": "Small chamfer for pressing - do not make large enough to reduce effective bearing length"
+      },
+      "qc_before_fitting": [
+        "OD at minimum 3 axial positions",
+        "OD at 0 and 90 degrees for ovality",
+        "Length",
+        "Rough ID",
+        "Chamfer condition",
+        "No surface damage or burrs",
+        "Measure actual O24 H7 steel bore and calculate actual interference"
+      ],
+      "pairing_note": "Pair measured bush OD with actual shaft bore - do not rely only on drawing limits"
+    },
+    {
+      "op": 150,
+      "name": "Bronze bush pressing",
+      "machine": "Guided hydraulic or arbor press",
+      "method": [
+        "Clean O24 H7 housing bore",
+        "Use piloted pressing mandrel",
+        "Apply force squarely",
+        "Support close to bush seat",
+        "Press to drawing depth",
+        "Record press force",
+        "No hammering"
+      ],
+      "interference_range_mm": [0.014, 0.048]
+    },
+    {
+      "op": 160,
+      "name": "Post-press QC",
+      "checks": [
+        "Bush face position and full seating",
+        "No axial tilting",
+        "No cracks or edge damage",
+        "ID collapse measurement",
+        "Bush ovality",
+        "Steel OD distortion near press-fit region",
+        "Shaft runout before and after pressing"
+      ]
+    },
+    {
+      "op": 170,
+      "name": "Final boring/honing of fitted bronze bush",
+      "machine": "Precision boring machine, honing machine or ID grinder",
+      "target": "O20 H7 = 20.000-20.021 mm",
+      "critical_requirement": "Must be coaxial to datum C within O0.015 mm",
+      "setup_methods": [
+        "Line boring through fixture referenced from datum C (O18 H6)",
+        "Precision boring using mandrel/locator in datum C",
+        "Honing with guided alignment fixture",
+        "Internal grinding where suitable"
+      ],
+      "warning": "Gripping outside O35 or rough surface will NOT achieve O0.015 mm coaxiality to datum C. Must reference from O18 H6."
+    },
+    {
+      "op": 180,
+      "name": "Bush bore QC",
+      "checks": [
+        "O20 H7 size",
+        "Roundness",
+        "Taper",
+        "Surface roughness",
+        "Coaxiality to datum C - must be within O0.015 mm",
+        "Effective bush length",
+        "Burr-free edges"
+      ]
+    },
+    {
+      "op": 190,
+      "name": "Final cylindrical grinding",
+      "machine": "Cylindrical grinding machine",
+      "purpose": "Light corrective grind to restore journals after bush pressing distortion",
+      "sequence": [
+        "Finish O30 k5 to 30.002-30.011 mm",
+        "Finish O24 h7 to 23.979-24.000 mm",
+        "Finish all surfaces with 0.01 mm runout requirement relative to A-B",
+        "Achieve Ra 0.8 um on code-a surfaces",
+        "Maintain required hardened depth"
+      ],
+      "conditions": [
+        "Leave only small final CG allowance after rough CG",
+        "Do not locate through or load the bronze bush",
+        "Use protected centre holes or between-centres arrangement",
+        "Seal bronze bore against grinding swarf",
+        "Use adequate coolant - avoid grinding heat near pressed bush",
+        "Clean thoroughly afterward - abrasive in bronze damages mating shaft in service",
+        "Verify bush has not moved axially after grinding"
+      ]
+    },
+    {
+      "op": 200,
+      "name": "Cleaning and corrosion protection",
+      "note": "Confirm coating type, thickness and masking requirements before application. Do not coat O24 H7 bore unless coating thickness is included in machining calculation."
+    },
+    {
+      "op": 210,
+      "name": "Final inspection",
+      "checks": [
+        "Overall length 148.50-149.00 mm",
+        "O30 k5 journals 30.002-30.011 mm",
+        "O30 e8 diameters 29.927-29.960 mm",
+        "O24 h7 23.979-24.000 mm",
+        "O18 H6 18.000-18.011 mm",
+        "O20 H7 bronze bore 20.000-20.021 mm",
+        "O24 H7 bush housing records",
+        "Keyway width 7.949-7.985 mm",
+        "Keyway depth 4.00-4.20 mm",
+        "Keyway length 32.00-32.30 mm",
+        "Keyway parallelism 0.03 mm to datum A",
+        "Keyway symmetry 0.1 mm to datum A",
+        "Circular runout 0.01 mm relative to A-B on all specified surfaces",
+        "Circular runout 0.02 mm on left-hand feature",
+        "Coaxiality O0.015 mm relative to datum C",
+        "Surface roughness Ra 0.8 um on code-a surfaces",
+        "Hardness 530-630 HV",
+        "CHD 0.5-1.5 mm after grinding",
+        "Coating condition and coverage",
+        "Bronze bush seating and integrity",
+        "All chamfers and radii",
+        "Burr-free",
+        "Cleanliness - no abrasive in bronze bush"
+      ]
+    }
+  ],
+
+  "machine_allocation": [
+    { "operation": "Raw material cutting",          "equipment": "Lexon band-saw",                              "in_house": true },
+    { "operation": "Rough and semi-finish turning", "equipment": "CNC lathe / CNC turning centre",             "in_house": true },
+    { "operation": "U-drill / gun drill",           "equipment": "CNC lathe with through-coolant or gun-drill machine", "in_house": true },
+    { "operation": "Keyway machining",              "equipment": "CNC VMC or keyway slotting machine",         "in_house": true },
+    { "operation": "Stress relieving",              "equipment": "Heat treatment furnace",                     "in_house": "confirm" },
+    { "operation": "Hardening",                     "equipment": "Heat treatment furnace or induction hardening equipment", "in_house": "subcontract if no suitable furnace" },
+    { "operation": "Rough CG and final CG",         "equipment": "Cylindrical grinding machine",              "in_house": true },
+    { "operation": "Internal finish - O18 H6",      "equipment": "ID grinding machine or precision honing",   "in_house": true },
+    { "operation": "Internal finish - O24 H7",      "equipment": "ID grinding, fine boring or honing",        "in_house": true },
+    { "operation": "Bronze bush pressing",          "equipment": "Guided hydraulic or arbor press",           "in_house": true },
+    { "operation": "Final O20 H7 boring/honing",    "equipment": "Precision boring machine or honing machine referenced from datum C", "in_house": true },
+    { "operation": "Final inspection",              "equipment": "CMM, air gauges, bore gauges, bench centres, roundness tester", "in_house": true }
+  ],
+
+  "drawing_clarifications": [
+    {
+      "item": 1,
+      "topic": "Hardening process not specified",
+      "description": "Drawing gives hardness and CHD but does not specify induction hardening, nitriding, carburizing or another method. Confirm before issuing heat-treatment purchase specification."
+    },
+    {
+      "item": 2,
+      "topic": "Corrosion protection process not specified",
+      "description": "Coating type not identified. Coating thickness and masking could affect precision fits O30 k5, O24 H7 and O18 H6. Confirm process, thickness and masking."
+    },
+    {
+      "item": 3,
+      "topic": "O20 H7 final bore after bush pressing",
+      "description": "Drawing shows bronze bush with initial ID ~O19 and final ID O20 H7. Confirm that bush is intended to be finish-machined to O20 H7 after pressing - this is the logical interpretation but must be formally confirmed."
+    }
+  ],
+
+  "route_summary": "Saw 42CrMo4 blank -> CNC turning setup 1: face, centre-drill, rough OD, U-drill, rough bore -> CNC turning setup 2: reverse, semi-finish OD and bores, shoulders, undercuts -> stress relieve -> keyway machining -> pre-HT QC (HOLD) -> optional pre-CG -> harden 530-630 HV -> post-HT QC (HOLD) -> rough CG on O30 k5 journals -> QC -> finish steel bores O18 H6 and O24 H7 by hard boring/ID grinding -> bore QC -> bronze bush manufacture and QC -> bush pressing -> post-press QC -> final bore O20 H7 referenced to datum C -> bush bore QC -> final CG light corrective grind -> clean and apply corrosion protection -> final inspection"
+}

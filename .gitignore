@@ -106,6 +106,12 @@ instance/
 .webassets-cache
 .scrapy
 
+# Internal planning and development notes
+plan.md
+notes.md
+internal_docs/
+development_notes/
+
 # Cloud provider credentials
 .aws/
 .azure/

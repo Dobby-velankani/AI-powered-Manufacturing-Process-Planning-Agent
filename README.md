@@ -58,10 +58,21 @@ pip install -r requirements.txt
 
 4. Create `.env` file:
 ```bash
-GEMINI_API_KEY=your_api_key_here
+# Copy the example file
+cp .env.example .env
+
+# Edit .env file with your API key
+# Get Gemini API key from: https://makersuite.google.com/app/apikey
+```
+
+Example `.env` content:
+```bash
+GEMINI_API_KEY=your_actual_gemini_api_key_here
 GEMINI_MODEL=gemini-3.5-flash
 GEMINI_FALLBACK_MODELS=gemini-1.5-pro,gemini-1.5-flash
 ```
+
+⚠️ **Security Notice**: Never commit your `.env` file to version control!
 
 5. Run the application:
 ```bash
